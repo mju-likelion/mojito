@@ -1,7 +1,11 @@
+import Banner from './Banner';
+import ContentBox from './ContentBox';
+
 const Main = () => {
   return (
     <>
-      <h1>Main 페이지</h1>
+      <Banner />
+      <ContentBox />
     </>
   );
 };
