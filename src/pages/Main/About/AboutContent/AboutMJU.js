@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 
-import AboutMju1 from '../../../../assets/images/AboutMju1';
-import AboutMju2 from '../../../../assets/images/AboutMju2';
-import AboutMju3 from '../../../../assets/images/AboutMju3';
 import ArticleImageCard from '../../../../components/ArticleImageCard';
 
 const AboutMJU = () => {
@@ -14,9 +11,6 @@ const AboutMJU = () => {
         {ARTICELS.map(item => (
           <ArticleImageCard key={item.id} imageName={item.imageName} />
         ))}
-        {/* <AboutMju1 />
-        <AboutMju2 />
-        <AboutMju3 /> */}
       </Article>
     </Wrapper>
   );
