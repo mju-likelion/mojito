@@ -5,7 +5,7 @@ import React from 'react';
  * /src/assets/images 내부에 파일이 위치해야합니다.
  * @param {string}fileName
  * */
-const svgComponent = (fileName = 'IllustService') => {
+const SvgComponent = (fileName = 'IllustService') => {
   const SVG = React.lazy(() => import(`../assets/images/${fileName}`));
   return (
     <React.Suspense fallback={<div>로딩...</div>}>
@@ -14,4 +14,4 @@ const svgComponent = (fileName = 'IllustService') => {
   );
 };
 
-export default svgComponent;
+export default SvgComponent;
