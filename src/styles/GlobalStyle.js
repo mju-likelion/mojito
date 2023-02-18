@@ -5,6 +5,8 @@ import './GlobalFont.css';
 const GlobalStyle = createGlobalStyle`
     ${reset};
     body{
+        background-color: #1c1b1a;
+        color: #fff;
         padding: 0;
         margin: 0;
         font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP','Montserrat', sans-serif;
