@@ -49,6 +49,7 @@ const FolderContainer = styled.div`
   margin: 0 auto 160px;
   border-radius: 0 30px 30px 30px;
   padding-top: 60px;
+  box-sizing: border-box;
 `;
 
 const FolderTopLine = styled.div`
