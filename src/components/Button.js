@@ -8,9 +8,18 @@ import styled from 'styled-components';
  * @param {string} errorMessage 표시할 에러 메시지
  * @param {() => void} handleClick 버튼 클릭시 실행할 이벤트, Route 기능의 경우 history.push와 같은 함수를 이용합니다.
  * @param {string} buttonColor 버튼 배경 색상
+ * @param {string} hoverColor 버튼 호버 배경 색상
  * @param {object} props 폰트 관련 속성
  */
-const Button = ({ text, type = 'button', errorMessage, handleClick, buttonColor = 'ORANGE', ...props }) => {
+const Button = ({
+  text,
+  type = 'button',
+  errorMessage,
+  handleClick,
+  buttonColor = 'ORANGE',
+  hoverColor = '#ffab6b',
+  ...props
+}) => {
   const { fontWeight, textSize, lineHeight } = props;
   const [isShowErrorMessage, setIsShowErrorMessage] = useState(false);
 
@@ -37,6 +46,7 @@ const Button = ({ text, type = 'button', errorMessage, handleClick, buttonColor 
         textSize={textSize}
         fontWeight={fontWeight}
         lineHeight={lineHeight}
+        hoverColor={hoverColor}
       >
         {text}
       </ButtonStyle>
@@ -66,7 +76,7 @@ const ButtonStyle = styled.button`
   }
   background-color: ${({ disable, theme, buttonColor }) => (disable ? theme.colors.GRAY2 : theme.colors[buttonColor])};
   :hover {
-    background-color: ${({ disable }) => disable || '#ffab6b'};
+    background-color: ${({ disable, hoverColor }) => disable || hoverColor};
   }
 `;
 

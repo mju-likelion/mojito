@@ -9,10 +9,10 @@ const FootPrint = () => {
     <>
       {/* 컴포넌트 영역 분리를 위해 임시적으로 hr태그를 사용하였습니다. */}
       <hr />
+      <FolderTopLine>
+        <FolderTop />
+      </FolderTopLine>
       <FolderContainer>
-        <FolderTopLine>
-          <FolderTop />
-        </FolderTopLine>
         <FolerTextBox>
           <FolderTitle>PROJECT</FolderTitle>
           <IntroductionTitle>명지대 멋사 프로젝트 발자국 소개</IntroductionTitle>
@@ -25,11 +25,12 @@ const FootPrint = () => {
         <ButtonBox>
           <Button
             text={'프로젝트 구경하러 가기'}
-            // handleClick={() => window.open('https://mjulikelion-apply.netlify.app/', '_blank')} 이건 추후에 라우터 연결
+            handleClick={() => window.open('https://github.com/mju-likelion', '_blank')}
             buttonColor="BLACK"
             fontWeight="700"
             textSize="20px"
             lineHeight="25px"
+            hoverColor="#4f4f4f"
           />
         </ButtonBox>
         <PorjectTagBox>
@@ -43,15 +44,18 @@ const FootPrint = () => {
 
 const FolderContainer = styled.div`
   width: 1200px;
-  height: 785px;
+  height: 743px;
   background-color: ${({ theme }) => theme.colors.BLUE1};
-  margin: 160px auto;
+  margin: 0 auto 160px;
+  border-radius: 0 30px 30px 30px;
+  padding-top: 60px;
 `;
 
 const FolderTopLine = styled.div`
   width: 1200px;
   height: 42px;
   background-color: ${({ theme }) => theme.colors.BLACK};
+  margin: 160px auto 0;
 `;
 
 const FolerTextBox = styled.div`
@@ -60,7 +64,7 @@ const FolerTextBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 60px 420px 12px 60px;
+  margin: 0px 420px 12px 60px;
 `;
 const FolderTitle = styled.p`
   font-weight: 500;
