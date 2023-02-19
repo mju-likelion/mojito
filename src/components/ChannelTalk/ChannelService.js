@@ -6,41 +6,31 @@ class ChannelService {
   loadScript() {
     (function () {
       let globalWindow = window;
-
       if (globalWindow.ChannelIO) {
         return globalWindow.console.error('ChannelIO script included twice.');
       }
-
       let channel = function () {
         channel.context(arguments);
       };
-
-      channel.queue = [];
+      channel.q = [];
       channel.context = function (args) {
-        channel.queue.push(args);
+        channel.q.push(args);
       };
-
       globalWindow.ChannelIO = channel;
-
       function initChannelTalk() {
         if (globalWindow.ChannelIOInitialized) {
           return;
         }
-
         globalWindow.ChannelIOInitialized = true;
-
         let script = document.createElement('script');
         script.type = 'text/javascript';
         script.async = true;
         script.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
-
         let firstScript = document.getElementsByTagName('script')[0];
-
         if (firstScript.parentNode) {
           firstScript.parentNode.insertBefore(script, firstScript);
         }
       }
-
       if (document.readyState === 'complete') {
         initChannelTalk();
       } else {
