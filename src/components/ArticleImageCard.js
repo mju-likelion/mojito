@@ -20,8 +20,14 @@ const ArticleImageCard = ({ imageName = null, title = '', text = '' }) => {
 };
 
 const Wrapper = styled.div`
-  width: 376px;
-  height: 372px;
+  width: 318px;
+  height: 258px;
+  @media ${({ theme }) => theme.devices.TABLET} {
+  }
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    width: 376px;
+    height: 372px;
+  }
 `;
 const ImageBox = styled.div`
   width: 100%;
