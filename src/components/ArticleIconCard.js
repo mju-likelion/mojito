@@ -21,8 +21,16 @@ const ArticleCard = ({ iconName, title, text }) => {
 };
 
 const Wrapper = styled.div`
-  width: 278px;
-  height: 268px;
+  width: 276px;
+  height: 252px;
+  @media ${({ theme }) => theme.devices.TABLET} {
+    width: 268px;
+    height: 252px;
+  }
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    width: 278px;
+    height: 268px;
+  }
 `;
 
 const IconBox = styled.div``;
