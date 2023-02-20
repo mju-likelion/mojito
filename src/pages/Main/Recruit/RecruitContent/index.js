@@ -1,7 +1,7 @@
-import Culturefit from './Culturefit';
+import Culturefit from './Culturefit/Culturefit';
 import RecruitInfo from './RecruitInfo/RecruitInfo';
 import RecruitPart from './RecruitPart/RecruitPart';
-import RecruitSchedule from './RecruitSchedule';
+import RecruitSchedule from './RecruitSchedule/RecruitSchedule';
 import RecruitTarget from './RecruitTarget';
 
 const RecruitContent = () => {

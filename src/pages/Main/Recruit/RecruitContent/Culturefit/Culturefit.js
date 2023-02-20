@@ -1,4 +1,4 @@
-import TitleButton from '../../../../components/TitleButton';
+import TitleButton from '../../../../../components/TitleButton';
 
 const Culturefit = () => {
   return (

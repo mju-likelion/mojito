@@ -50,16 +50,16 @@ const InfoContent = styled.div`
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-  margin-bottom: 60px;
+  margin: 8px 0 60px 0;
   @media ${({ theme }) => theme.devices.TABLET} {
     font-size: 14px;
     line-height: 20px;
-    margin-bottom: 80px;
+    margin: 8px 0 80px 0;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
     font-size: 18px;
     line-height: 28px;
-    margin-bottom: 120px;
+    margin-bottom: 12px 0 120px 0;
   }
 `;
 export default RecruitInfo;
