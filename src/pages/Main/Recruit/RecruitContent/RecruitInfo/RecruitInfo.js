@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import ResponsiveBody from '../../../../components/ResponsiveBody';
+import ResponsiveBody from '../../../../../components/ResponsiveBody';
 
 import recruitGuide from './recruiteGuide';
 

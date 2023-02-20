@@ -1,5 +1,5 @@
 import Culturefit from './Culturefit';
-import RecruitInfo from './RecruitInfo';
+import RecruitInfo from './RecruitInfo/RecruitInfo';
 import RecruitPart from './RecruitPart/RecruitPart';
 import RecruitSchedule from './RecruitSchedule';
 import RecruitTarget from './RecruitTarget';
