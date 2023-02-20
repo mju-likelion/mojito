@@ -1,16 +1,18 @@
 import styled from 'styled-components';
 
-const RecruitInfo = () => {
-  const infoDesktopContentData =
-    "저희 멋쟁이사자처럼은 '교육'과 '협업'을 목표로 하는 단체로\n자연스럽게 그 중심은 다양한 형태의 공부입니다. 자기 발전에 대한 욕심을 원동력으로\n끊임없이 도전하고 노력하는 분들과 함께 한 걸음 더 나아가는한 해를 만들어보고자 합니다. \n따라서 저희 11기에서는 다음과 같은 분들을 모시고자 합니다.";
-  // const infoMobileContentData =
-  //   "저희 멋쟁이사자처럼은 '교육'과 '협업'을 목표로 하는\n단체로 자연스럽게 그 중심은 다양한 형태의 공부입니다.\n자기 발전에 대한 욕심을 원동력으로 끊임없이 도전하고\n노력하는 분들과 함께 한 걸음 더 나아가는한 해를\n만들어보고자 합니다. 따라서 저희 11기에서는\n다음과 같은 분들을 모시고자 합니다.";
+import ResponsiveBody from '../../../../components/ResponsiveBody';
 
+import recruitGuide from './recruiteGuide';
+
+const RecruitInfo = () => {
+  const { mobileText, desktopText } = recruitGuide;
   return (
     <>
       <InfoSubTitle>Recruit</InfoSubTitle>
       <InfoTitle>11기 모집 안내</InfoTitle>
-      <InfoContent>{infoDesktopContentData}</InfoContent>
+      <InfoContent>
+        <ResponsiveBody mobileText={mobileText} tabletText={desktopText} desktopText={desktopText} />
+      </InfoContent>
     </>
   );
 };
