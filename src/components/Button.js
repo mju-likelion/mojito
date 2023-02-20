@@ -20,7 +20,7 @@ const Button = ({
   hoverColor = '#ffab6b',
   ...props
 }) => {
-  const { fontWeight, textSize, lineHeight } = props;
+  const { fontWeight, pcTextSize, pcLineHeight, tabletTextSize, tabletLineHeight } = props;
   const [isShowErrorMessage, setIsShowErrorMessage] = useState(false);
 
   const handleButtonClick = () => {
@@ -43,9 +43,11 @@ const Button = ({
         disable={errorMessage}
         onClick={handleButtonClick}
         buttonColor={buttonColor}
-        textSize={textSize}
+        pcTextSize={pcTextSize}
+        tabletTextSize={tabletTextSize}
+        pcLineHeight={pcLineHeight}
+        tabletLineHeight={tabletLineHeight}
         fontWeight={fontWeight}
-        lineHeight={lineHeight}
         hoverColor={hoverColor}
       >
         {text}
@@ -65,14 +67,14 @@ const ButtonStyle = styled.button`
   border-radius: 35px;
   width: 192px;
   height: 50px;
-  font-size: ${({ textSize }) => textSize || '18px'};
-  line-height: ${({ lineHeight }) => lineHeight || '23px'};
+  font-size: ${({ tabletTextSize }) => tabletTextSize || '18px'};
+  line-height: ${({ tabletLineHeight }) => tabletLineHeight || '23px'};
   font-weight: ${({ fontWeight }) => fontWeight || '700'};
   @media (min-width: 1200px) {
     width: 260px;
     height: 70px;
-    font-size: ${({ textSize }) => textSize || '28px'};
-    line-height: ${({ lineHeight }) => lineHeight || '35px'};
+    font-size: ${({ pcTextSize }) => pcTextSize || '28px'};
+    line-height: ${({ pcLineHeight }) => pcLineHeight || '35px'};
   }
   background-color: ${({ disable, theme, buttonColor }) => (disable ? theme.colors.GRAY2 : theme.colors[buttonColor])};
   :hover {
