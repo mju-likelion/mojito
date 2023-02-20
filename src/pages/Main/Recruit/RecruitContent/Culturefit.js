@@ -1,5 +1,11 @@
+import TitleButton from '../../../../components/TitleButton';
+
 const Culturefit = () => {
-  return <>동료상</>;
+  return (
+    <>
+      <TitleButton content={'동료상'} />
+    </>
+  );
 };
 
 export default Culturefit;

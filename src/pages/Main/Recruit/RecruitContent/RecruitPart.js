@@ -1,5 +1,11 @@
+import TitleButton from '../../../../components/TitleButton';
+
 const RecruitPart = () => {
-  return <>모집 파트</>;
+  return (
+    <>
+      <TitleButton content={'모집 파트'} />
+    </>
+  );
 };
 
 export default RecruitPart;
