@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import TitleButton from '../TitleButton';
+import TitleButton from '../../../../components/TitleButton';
 
 const RecruitTarget = () => {
   return (

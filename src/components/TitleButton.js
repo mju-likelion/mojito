@@ -16,7 +16,11 @@ const Title = styled.div`
   color: ${({ theme }) => theme.colors.BLUE1};
   border: 1px solid ${({ theme }) => theme.colors.BLUE1};
   border-radius: 30px;
-  padding: 15px 46px;
+  padding: 7px 30px;
+
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    padding: 15px 46px;
+  }
 `;
 
 export default RecruitButton;
