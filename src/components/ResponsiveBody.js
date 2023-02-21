@@ -14,9 +14,6 @@ const MobileText = styled.div`
   @media ${({ theme }) => theme.devices.TABLET} {
     display: none;
   }
-  @media ${({ theme }) => theme.devices.DESKTOP} {
-    display: none;
-  }
 `;
 const TabletText = styled.div`
   display: none;
