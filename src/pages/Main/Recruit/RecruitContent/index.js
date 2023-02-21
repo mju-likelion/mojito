@@ -1,4 +1,4 @@
-import Culturefit from './Culturefit/Culturefit';
+import RecruitCulturefit from './Culturefit/RecruitCulturefit';
 import RecruitInfo from './RecruitInfo/RecruitInfo';
 import RecruitPart from './RecruitPart/RecruitPart';
 import RecruitSchedule from './RecruitSchedule/RecruitSchedule';
@@ -11,7 +11,7 @@ const RecruitContent = () => {
       <RecruitTarget />
       <RecruitPart />
       <RecruitSchedule />
-      <Culturefit />
+      <RecruitCulturefit />
     </>
   );
 };

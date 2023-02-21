@@ -14,7 +14,6 @@ const Recruit = () => {
 
 const Container = styled.div`
   width: 100%;
-  height: 2480px;
   margin: 0 auto;
   padding: 160px 0;
   display: flex;
