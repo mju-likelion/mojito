@@ -10,8 +10,8 @@ const RecruitSchedule = () => {
     <>
       <TitleButton content={'모집 일정'} />
       <WrapSchedule>
-        {ScheduleData.map((s, index) => (
-          <Schedule key={index} title={s.title} plan={s.plan} time={s.time} />
+        {ScheduleData.map((schedule, index) => (
+          <Schedule key={index} title={schedule.title} plan={schedule.plan} time={schedule.time} />
         ))}
       </WrapSchedule>
     </>

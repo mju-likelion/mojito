@@ -10,8 +10,8 @@ const RecruitCulturefit = () => {
     <>
       <TitleButton content={'동료상'} />
       <WrapCulturefit>
-        {CulturefitData.map((c, index) => (
-          <Culturefit key={index} no={c.no} content={c.content} />
+        {CulturefitData.map((culturefit, index) => (
+          <Culturefit key={index} no={culturefit.no} content={culturefit.content} />
         ))}
       </WrapCulturefit>
     </>
