@@ -45,15 +45,16 @@ const TextBox = styled.div`
     margin-bottom: 14px;
   }
   p {
-    font-size: 12px;
+    color: ${({ theme }) => theme.colors.GRAY2};
+    font-size: 15px;
     font-weight: 400;
     height: 96px;
-    line-height: 20px;
+    line-height: 24px;
   }
 `;
 
 const Hr = styled.hr`
-  border: 2px solid ${({ theme }) => theme.colors.GRAY1};
+  border: 1px solid ${({ theme }) => theme.colors.GRAY1};
   margin: 20px auto;
 `;
 

@@ -20,6 +20,7 @@ const AboutMJU = () => {
   );
 };
 
+/** @TODO 현재 태블릿, 모바일 버전 svg 컴포넌트 내용이 pc버전 내용임, 버전에 맞게 수정 필요 */
 const imageResolver = size => {
   const fileName = {
     pc: ['AboutMju1PC', 'AboutMju2PC', 'AboutMju3PC'],
