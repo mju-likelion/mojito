@@ -41,10 +41,25 @@ const Curriculum = () => {
                 <ChartSvg src={chart} />
               </Chart>
             ))}
-            <EventContainer>
-              <Arrow src={ArrowImgData[width]} />
-              <RightEvent></RightEvent>
-            </EventContainer>
+            <EventBackground>
+              <MobileArrowContainer>
+                <Arrow src={ArrowImgData[width]} />
+              </MobileArrowContainer>
+              <MobileEventContainer>
+                <EventSection>
+                  <BlueTitle>아이디어톤</BlueTitle>
+                  <EventText>{EventTextData.ideathon[width]}</EventText>
+                </EventSection>
+                <EventSection>
+                  <BlueTitle>해커톤</BlueTitle>
+                  <EventText>{EventTextData.hackathon[width]}</EventText>
+                </EventSection>
+                <EventSection>
+                  <BlueTitle>자율 프로젝트 및 관심분야 스터디</BlueTitle>
+                  <EventText>{EventTextData.study}</EventText>
+                </EventSection>
+              </MobileEventContainer>
+            </EventBackground>
           </>
         ) : (
           <>
@@ -176,10 +191,10 @@ const ChartSvg = styled.img`
 
 const EventBackground = styled.div`
   display: flex;
-  justify-content: flex-end;
   width: 318px;
-  margin: 80px auto 0 auto;
+  margin: 80px auto 80px auto;
   @media ${({ theme }) => theme.devices.TABLET} {
+    justify-content: flex-end;
     width: 568px;
     margin: 100px auto 0 auto;
   }
@@ -201,25 +216,20 @@ const EventContainer = styled.div`
 `;
 
 const ArrowContainer = styled.div`
-  grid-row: 1/-1;
-  grid-column: 2/3;
+  @media ${({ theme }) => theme.devices.TABLET} {
+    grid-row: 1/-1;
+    grid-column: 2/3;
+  }
+`;
+
+const MobileArrowContainer = styled.div`
+  width: 43px;
+  height: 841px;
 `;
 
 const Arrow = styled.img`
   width: 100%;
   height: 100%;
-`;
-
-const RightEvent = styled.div`
-  width: 557px;
-  height: 338px;
-  margin-top: 334px;
-`;
-
-const LeftEvent = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
 `;
 
 const BlueTitle = styled.div`
@@ -228,7 +238,6 @@ const BlueTitle = styled.div`
   color: ${({ theme }) => theme.colors.BLUE1};
   font-weight: 700;
   border-radius: 100px;
-
   padding: 7px 30px;
   font-size: 14px;
   line-height: 20px;
@@ -244,6 +253,7 @@ const BlueTitle = styled.div`
 const EventSection = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 `;
 
 const Ideathon = styled(EventSection)`
@@ -302,4 +312,14 @@ const HackathonImgs = styled.div`
 const HackathonSvg = styled.img`
   width: 100%;
   height: 100%;
+`;
+
+const MobileEventContainer = styled.div`
+  box-sizing: border-box;
+  width: 264px;
+  height: 841px;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
