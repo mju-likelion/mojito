@@ -25,30 +25,55 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 588px;
-  height: 386px;
-  margin: 160px auto;
+  @media ${({ theme }) => theme.devices.TABLET} {
+    width: 412px;
+    height: 287px;
+    margin: 100px auto;
+  }
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    width: 588px;
+    height: 386px;
+    margin: 160px auto;
+  }
 `;
 
 const ContentText = styled.span`
   font-weight: 400;
   color: ${({ theme }) => theme.colors.GRAY2};
   text-align: center;
-  font-size: 20px;
-  line-height: 32px;
+
+  @media ${({ theme }) => theme.devices.TABLET} {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    font-size: 20px;
+    line-height: 32px;
+  }
 `;
 
 const ProposeText = styled.p`
   margin-top: 30px;
   text-align: center;
   font-weight: 700;
-  font-size: 40px;
-  line-height: 50px;
   color: ${({ theme }) => theme.colors.WHITE};
+  @media ${({ theme }) => theme.devices.TABLET} {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    font-size: 40px;
+    line-height: 50px;
+  }
 `;
 
 const ButtonBox = styled.div`
-  margin: 100px auto 40px;
+  @media ${({ theme }) => theme.devices.TABLET} {
+    margin: 80px auto 25px;
+  }
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    margin: 100px auto 40px;
+  }
 `;
 
 export default OfficialApply;
