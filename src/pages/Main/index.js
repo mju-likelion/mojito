@@ -1,6 +1,7 @@
 import About from './About';
 import Banner from './Banner';
 import FootPrint from './FootPrint';
+import OfficialApply from './OfficialApply';
 
 const Main = () => {
   return (
@@ -8,6 +9,7 @@ const Main = () => {
       <Banner />
       <About />
       <FootPrint />
+      <OfficialApply />
     </>
   );
 };
