@@ -16,10 +16,10 @@ const AboutMju3 = () => {
             fill="#AAAAAA"
           />
         </g>
-        <rect id="IMG_5840" width="376" height="232" rx="12" fill="url(#pattern3)" />
+        <rect id="IMG_5840" width="376" height="232" rx="12" fill="url(#patternAboutMju3PC)" />
       </g>
       <defs>
-        <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
+        <pattern id="patternAboutMju3PC" patternContentUnits="objectBoundingBox" width="1" height="1">
           <use xlinkHref="#image0_1526_10297" transform="matrix(0.00035054 0 0 0.000570123 -0.221243 -0.283916)" />
         </pattern>
         <image
