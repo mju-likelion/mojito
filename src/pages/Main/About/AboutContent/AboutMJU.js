@@ -1,20 +1,29 @@
 import styled from 'styled-components';
 
 import ArticleImageCard from '../../../../components/ArticleImageCard';
-import useWindowResize from '../../../../hooks/useWindowResize';
 
 /** @TODO TABLE 버전 UI 추가하기 */
 const AboutMJU = () => {
-  const [size] = useWindowResize();
-
   return (
     <Wrapper>
       <h1>멋쟁이사자처럼 명지대(자연)</h1>
       <Hr />
       <Article>
-        {imageResolver(size).map(item => (
-          <ArticleImageCard key={item.id} imageName={item.imageName} />
-        ))}
+        <PcImages>
+          {FILE_NAME.pc.map((item, idx) => (
+            <ArticleImageCard key={idx} imageName={item} />
+          ))}
+        </PcImages>
+        <TabletImages>
+          {FILE_NAME.tablet.map((item, idx) => (
+            <ArticleImageCard key={idx} imageName={item} />
+          ))}
+        </TabletImages>
+        <MobileImages>
+          {FILE_NAME.mobile.map((item, idx) => (
+            <ArticleImageCard key={idx} imageName={item} />
+          ))}
+        </MobileImages>
       </Article>
     </Wrapper>
   );
@@ -25,15 +34,6 @@ const FILE_NAME = {
   pc: ['AboutMju1PC', 'AboutMju2PC', 'AboutMju3PC'],
   tablet: ['AboutMju1Tablet', 'AboutMju2Tablet', 'AboutMju3Tablet'],
   mobile: ['AboutMju1Mobile', 'AboutMju2Mobile', 'AboutMju3Mobile'],
-};
-const imageResolver = size => {
-  if (size.width >= 1200) {
-    return FILE_NAME.pc.map((file, idx) => ({ id: idx, imageName: file }));
-  } else if (size.width >= 600) {
-    return FILE_NAME.tablet.map((file, idx) => ({ id: idx, imageName: file }));
-  } else {
-    return FILE_NAME.mobile.map((file, idx) => ({ id: idx, imageName: file }));
-  }
 };
 
 const Wrapper = styled.div`
@@ -93,14 +93,35 @@ const Article = styled.div`
     margin: 30px 0 60px 0;
   }
 
-  @media ${({ theme }) => theme.devices.TABLET} {
-    /*  */
-  }
   @media ${({ theme }) => theme.devices.DESKTOP} {
     svg:nth-child(even) {
       margin: 0;
     }
     gap: 0 36px;
+  }
+`;
+
+const PcImages = styled.div`
+  gap: 0 36px;
+  display: none;
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    display: flex;
+  }
+`;
+
+const TabletImages = styled.div`
+  display: none;
+  @media ${({ theme }) => theme.devices.TABLET} {
+    display: block;
+  }
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    display: none;
+  }
+`;
+
+const MobileImages = styled.div`
+  @media ${({ theme }) => theme.devices.TABLET} {
+    display: none;
   }
 `;
 

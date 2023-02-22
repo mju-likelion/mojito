@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import ResponsiveBody from './ResponsiveBody';
 import SvgComponent from './SvgComponent';
 
 /**
@@ -10,11 +11,13 @@ import SvgComponent from './SvgComponent';
 const ArticleCard = ({ iconName, title, text }) => {
   return (
     <Wrapper>
-      <IconBox>{SvgComponent(iconName)}</IconBox>
+      {SvgComponent(iconName)}
       <Hr />
       <TextBox>
         <h1>{title}</h1>
-        <p>{text}</p>
+        <TextMobile>{text.mobile}</TextMobile>
+        <TextTablet>{text.tablet}</TextTablet>
+        <TextPc>{text.pc}</TextPc>
       </TextBox>
     </Wrapper>
   );
@@ -33,8 +36,6 @@ const Wrapper = styled.div`
   }
 `;
 
-const IconBox = styled.div``;
-
 const TextBox = styled.div`
   white-space: pre-wrap;
   h1 {
@@ -44,12 +45,52 @@ const TextBox = styled.div`
     line-height: 20px;
     margin-bottom: 14px;
   }
-  p {
+  /* p {
     color: ${({ theme }) => theme.colors.GRAY2};
     font-size: 15px;
     font-weight: 400;
     height: 96px;
     line-height: 24px;
+  } */
+`;
+
+const TextMobile = styled.p`
+  color: ${({ theme }) => theme.colors.GRAY2};
+  font-size: 12px;
+  font-weight: 400;
+  height: 96px;
+  line-height: 20px;
+  @media ${({ theme }) => theme.devices.TABLET} {
+    display: none;
+  }
+`;
+
+const TextTablet = styled.p`
+  color: ${({ theme }) => theme.colors.GRAY2};
+  font-size: 12px;
+  font-weight: 400;
+  height: 96px;
+  line-height: 20px;
+
+  display: none;
+  @media ${({ theme }) => theme.devices.TABLET} {
+    display: block;
+  }
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    display: none;
+  }
+`;
+
+const TextPc = styled.p`
+  color: ${({ theme }) => theme.colors.GRAY2};
+  font-size: 15px;
+  font-weight: 400;
+  height: 96px;
+  line-height: 24px;
+
+  display: none;
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    display: block;
   }
 `;
 
