@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import styled from 'styled-components';
 
+import ResponsiveBody from '../../../../../components/ResponsiveBody';
 import TitleButton from '../../../../../components/TitleButton';
 
 import { PART_DATA } from './PartData.js';
@@ -10,9 +11,6 @@ import PartInfoMobile from './PartInfoMobile';
 import PartInfoTablet from './PartInfoTablet';
 
 const RecruitPart = () => {
-  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
-  const DESKTOP_WIDTH = 1199;
-  const TABLET_WIDTH = 599;
   const [clickedArray, setClickedArray] = useState([false, false, false]);
 
   const handleClick = index => {
@@ -27,37 +25,37 @@ const RecruitPart = () => {
     }
   };
 
-  const changeWidth = (apply, index) => {
-    if (innerWidth > DESKTOP_WIDTH) {
-      return <PartInfo partInfo={apply} key={index} />;
-    } else if (innerWidth > TABLET_WIDTH) {
-      return <PartInfoTablet partInfo={apply} key={index} />;
-    } else {
-      return <PartInfoMobile partInfo={apply} key={index} handleClick={handleClick} isSelected={clickedArray[index]} />;
-    }
-  };
-
-  useEffect(() => {
-    const resizeListener = () => {
-      setInnerWidth(window.innerWidth);
-    };
-    window.addEventListener('resize', resizeListener);
-    return () => {
-      window.removeEventListener('resize', resizeListener);
-    };
-  });
-
   return (
     <>
       <TitleButton content={'모집 파트'} />
       <RecruitPartBlock>
         <PartInfoBlock>
-          {Object.keys(PART_DATA).map((keyName, index) => changeWidth(PART_DATA[keyName], index))}
+          {Object.keys(PART_DATA).map((keyName, index) => (
+            <ResponsiveBody
+              key={index}
+              mobileText={
+                <PartInfoMobile
+                  partInfo={PART_DATA[keyName]}
+                  key={index}
+                  handleClick={handleClick}
+                  isSelected={clickedArray[index]}
+                />
+              }
+              tabletText={<PartInfoTablet partInfo={PART_DATA[keyName]} key={index} />}
+              desktopText={<PartInfo partInfo={PART_DATA[keyName]} key={index} />}
+            />
+          ))}
         </PartInfoBlock>
       </RecruitPartBlock>
     </>
   );
 };
+
+const PartInfoBlock = styled.div`
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    display: flex;
+  }
+`;
 
 const RecruitPartBlock = styled.div`
   display: table;
@@ -69,12 +67,6 @@ const RecruitPartBlock = styled.div`
 
   @media ${({ theme }) => theme.devices.DESKTOP} {
     margin: 60px 0 160px 0;
-  }
-`;
-
-const PartInfoBlock = styled.div`
-  @media ${({ theme }) => theme.devices.DESKTOP} {
-    display: flex;
   }
 `;
 
