@@ -166,7 +166,7 @@ const Container = styled.div`
 `;
 
 const RoadmapText = styled.p`
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-size: 10px;
   color: ${({ theme }) => theme.colors.BLUE1};
   font-weight: 500;
