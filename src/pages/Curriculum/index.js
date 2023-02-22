@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 
 import styled from 'styled-components';
 
-import HighlightText from '../../components/HighlightText';
 import SvgComponent from '../../components/SvgComponent';
 
-import { CurriculumTextData, CurriculumChartData, ArrowImgData, EventTextData, HackathonImageData } from './AssetsData';
+import { CurriculumTextData, CurriculumChartData, ArrowImgData } from './AssetsData';
+import Hackathon from './Hackathon';
+import Ideathon from './Ideathon';
+import Study from './Study';
 
 const DESKTOP_WIDTH = 1199;
 const TABLET_WIDTH = 599;
@@ -44,16 +46,13 @@ const Curriculum = () => {
               <MobileArrowContainer>{SvgComponent(ArrowImgData[width])}</MobileArrowContainer>
               <MobileEventContainer>
                 <EventSection>
-                  <BlueTitle>아이디어톤</BlueTitle>
-                  <EventText>{EventTextData.ideathon[width]}</EventText>
+                  <Ideathon />
                 </EventSection>
                 <EventSection>
-                  <BlueTitle>해커톤</BlueTitle>
-                  <EventText>{EventTextData.hackathon[width]}</EventText>
+                  <Hackathon width={width} />
                 </EventSection>
                 <EventSection>
-                  <BlueTitle>자율 프로젝트 및 관심분야 스터디</BlueTitle>
-                  <EventText>{EventTextData.study}</EventText>
+                  <Study />
                 </EventSection>
               </MobileEventContainer>
             </EventBackground>
@@ -63,24 +62,16 @@ const Curriculum = () => {
             <Chart>{SvgComponent(CurriculumChartData[width])}</Chart>
             <EventBackground>
               <EventContainer>
-                <Ideathon>
-                  <BlueTitle>아이디어톤</BlueTitle>
-                  <EventText>
-                    <HighlightText text={EventTextData.ideathon[width]} target={EventTextData.ideathon.highlight} />
-                  </EventText>
-                </Ideathon>
-                <Study>
-                  <BlueTitle>자율 프로젝트 및 관심분야 스터디</BlueTitle>
-                  <EventText>{EventTextData.study}</EventText>
-                </Study>
+                <IdeathonWrapper>
+                  <Ideathon />
+                </IdeathonWrapper>
+                <StudyWrapper>
+                  <Study />
+                </StudyWrapper>
                 <ArrowContainer>{SvgComponent(ArrowImgData[width])}</ArrowContainer>
-                <Hackathon>
-                  <BlueTitle>해커톤</BlueTitle>
-                  <EventText>
-                    <HighlightText text={EventTextData.hackathon[width]} target={EventTextData.hackathon.highlight} />
-                    <HackathonImgs>{SvgComponent(HackathonImageData[width])}</HackathonImgs>
-                  </EventText>
-                </Hackathon>
+                <HackathonWrapper>
+                  <Hackathon width={width} />
+                </HackathonWrapper>
               </EventContainer>
             </EventBackground>
           </>
@@ -91,6 +82,55 @@ const Curriculum = () => {
 };
 
 export default Curriculum;
+
+export const DeskTopBreakLine = styled.br`
+  display: none;
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    display: block;
+  }
+`;
+
+export const MobileBreakLine = styled.br`
+  display: block;
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    display: none;
+  }
+`;
+
+export const BlueTitle = styled.div`
+  display: inline-block;
+  border: 1px solid ${({ theme }) => theme.colors.BLUE1};
+  color: ${({ theme }) => theme.colors.BLUE1};
+  font-weight: 700;
+  border-radius: 100px;
+  padding: 7px 30px;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 20px;
+
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    padding: 15px 46px;
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+`;
+
+export const EventText = styled.div`
+  color: ${({ theme }) => theme.colors.GRAY2};
+  white-space: pre-wrap;
+  font-size: 12px;
+  line-height: 20px;
+  span {
+    color: white;
+    font-weight: 700;
+  }
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    width: 557px;
+    height: 120px;
+    font-size: 15px;
+    line-height: 26px;
+  }
+`;
 
 const Background = styled.div`
   box-sizing: border-box;
@@ -175,11 +215,6 @@ const Chart = styled.div`
   }
 `;
 
-const ChartSvg = styled.img`
-  width: 100%;
-  height: 100%;
-`;
-
 const EventBackground = styled.div`
   display: flex;
   width: 318px;
@@ -218,36 +253,13 @@ const MobileArrowContainer = styled.div`
   height: 841px;
 `;
 
-const Arrow = styled.img`
-  width: 100%;
-  height: 100%;
-`;
-
-const BlueTitle = styled.div`
-  display: inline-block;
-  border: 1px solid ${({ theme }) => theme.colors.BLUE1};
-  color: ${({ theme }) => theme.colors.BLUE1};
-  font-weight: 700;
-  border-radius: 100px;
-  padding: 7px 30px;
-  font-size: 14px;
-  line-height: 20px;
-  margin-bottom: 20px;
-
-  @media ${({ theme }) => theme.devices.DESKTOP} {
-    padding: 15px 46px;
-    font-size: 18px;
-    margin-bottom: 24px;
-  }
-`;
-
 const EventSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 `;
 
-const Ideathon = styled(EventSection)`
+const IdeathonWrapper = styled(EventSection)`
   align-items: flex-end;
   justify-content: flex-end;
   grid-row: 1/2;
@@ -255,7 +267,7 @@ const Ideathon = styled(EventSection)`
   text-align: end;
 `;
 
-const Study = styled(EventSection)`
+const StudyWrapper = styled(EventSection)`
   justify-content: flex-start;
   align-items: flex-end;
   grid-row: -2/-1;
@@ -263,46 +275,10 @@ const Study = styled(EventSection)`
   text-align: end;
 `;
 
-const Hackathon = styled(EventSection)`
+const HackathonWrapper = styled(EventSection)`
   grid-row: 2/3;
   grid-column: -2/-1;
   justify-content: flex-start;
-  align-items: flex-start;
-`;
-
-const EventText = styled.div`
-  color: ${({ theme }) => theme.colors.GRAY2};
-  white-space: pre-wrap;
-  font-size: 12px;
-  line-height: 20px;
-  span {
-    color: white;
-    font-weight: 700;
-  }
-  @media ${({ theme }) => theme.devices.DESKTOP} {
-    width: 557px;
-    height: 120px;
-    margin-top: 40px;
-
-    font-size: 15px;
-    line-height: 26px;
-  }
-`;
-
-const HackathonImgs = styled.div`
-  width: 264px;
-  height: 59px;
-  margin-top: 20px;
-  @media ${({ theme }) => theme.devices.DESKTOP} {
-    width: 557px;
-    height: 120px;
-    margin-top: 40px;
-  }
-`;
-
-const HackathonSvg = styled.img`
-  width: 100%;
-  height: 100%;
 `;
 
 const MobileEventContainer = styled.div`
