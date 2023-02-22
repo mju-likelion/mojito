@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-import ResponsiveBody from './ResponsiveBody';
 import SvgComponent from './SvgComponent';
 
 /**
