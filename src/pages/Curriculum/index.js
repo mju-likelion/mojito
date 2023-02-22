@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import HighlightText from '../../components/HighlightText';
+import SvgComponent from '../../components/SvgComponent';
 
 import { CurriculumTextData, CurriculumChartData, ArrowImgData, EventTextData, HackathonImageData } from './AssetsData';
 
@@ -37,14 +38,10 @@ const Curriculum = () => {
         {width === 'mobile' ? (
           <>
             {CurriculumChartData[width].map((chart, i) => (
-              <Chart key={i}>
-                <ChartSvg src={chart} />
-              </Chart>
+              <Chart key={i}>{SvgComponent(chart)}</Chart>
             ))}
             <EventBackground>
-              <MobileArrowContainer>
-                <Arrow src={ArrowImgData[width]} />
-              </MobileArrowContainer>
+              <MobileArrowContainer>{SvgComponent(ArrowImgData[width])}</MobileArrowContainer>
               <MobileEventContainer>
                 <EventSection>
                   <BlueTitle>아이디어톤</BlueTitle>
@@ -63,9 +60,7 @@ const Curriculum = () => {
           </>
         ) : (
           <>
-            <Chart>
-              <ChartSvg src={CurriculumChartData[width]} />
-            </Chart>
+            <Chart>{SvgComponent(CurriculumChartData[width])}</Chart>
             <EventBackground>
               <EventContainer>
                 <Ideathon>
@@ -78,16 +73,12 @@ const Curriculum = () => {
                   <BlueTitle>자율 프로젝트 및 관심분야 스터디</BlueTitle>
                   <EventText>{EventTextData.study}</EventText>
                 </Study>
-                <ArrowContainer>
-                  <Arrow src={ArrowImgData[width]} />
-                </ArrowContainer>
+                <ArrowContainer>{SvgComponent(ArrowImgData[width])}</ArrowContainer>
                 <Hackathon>
                   <BlueTitle>해커톤</BlueTitle>
                   <EventText>
                     <HighlightText text={EventTextData.hackathon[width]} target={EventTextData.hackathon.highlight} />
-                    <HackathonImgs>
-                      <HackathonSvg src={HackathonImageData[width]} />
-                    </HackathonImgs>
+                    <HackathonImgs>{SvgComponent(HackathonImageData[width])}</HackathonImgs>
                   </EventText>
                 </Hackathon>
               </EventContainer>

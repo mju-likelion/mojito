@@ -1,14 +1,3 @@
-import HackathonPcImg from '../../assets/images/curriculm2_pc_image.svg';
-import HackathonTabletImage from '../../assets/images/curriculm2_tablet_image.svg';
-import ArrowImgMobileImg from '../../assets/images/curriculum_line_mobile.svg';
-import ArrowImgPCImg from '../../assets/images/curriculum_line_pc.svg';
-import ArrowImgTabletImg from '../../assets/images/curriculum_line_tablet.svg';
-import CurriculumMobileDesignImg from '../../assets/images/curriculum_mobile_design.svg';
-import CurriculumMobileServerImg from '../../assets/images/curriculum_mobile_server.svg';
-import CurriculumMobileWebImg from '../../assets/images/curriculum_mobile_web.svg';
-import CurriculumPcImg from '../../assets/images/curriculum_pc.svg';
-import CurriculumTabletImg from '../../assets/images/curriculum_tablet.svg';
-
 export const CurriculumTextData = {
   desktop: `멋쟁이사자처럼 명지대(자연) 11기에서는 웹, 서버, 기획/디자인 파트로 나누어 진행됩니다. 각 파트별로 회원들의 실력 향상과 프로젝트 아웃풋을 위한 각 파트별 커리큘럼이 운영되며 다른 파트와의 크로스오버로 협업을 위한 과정을 배워갑니다.`,
   tablet: `멋쟁이사자처럼 명지대(자연) 11기에서는 웹, 서버, 기획/디자인 파트로 나누어 진행됩니다. 각 파트별로 회원들의 실력 향상과 프로젝트 아웃풋을 위한 각 파트별 커리큘럼이 운영되며 다른 파트와의 크로스오버로 협업을 위한 과정을 배워갑니다.`,
@@ -16,15 +5,15 @@ export const CurriculumTextData = {
 };
 
 export const CurriculumChartData = {
-  desktop: CurriculumPcImg,
-  tablet: CurriculumTabletImg,
-  mobile: [CurriculumMobileWebImg, CurriculumMobileServerImg, CurriculumMobileDesignImg],
+  desktop: 'CurriculumPc',
+  tablet: 'CurriculumTablet',
+  mobile: ['CurriculumMobileWeb', 'CurriculumMobileServer', 'CurriculumMobileDesign'],
 };
 
 export const ArrowImgData = {
-  desktop: ArrowImgPCImg,
-  tablet: ArrowImgTabletImg,
-  mobile: ArrowImgMobileImg,
+  desktop: 'CurriculumLinePc',
+  tablet: 'CurriculumLineTablet',
+  mobile: 'CurriculumLineMobile',
 };
 
 export const EventTextData = {
@@ -66,6 +55,7 @@ export const EventTextData = {
 };
 
 export const HackathonImageData = {
-  desktop: HackathonPcImg,
-  tablet: HackathonTabletImage,
+  desktop: 'Curriculum2PcImage',
+  tablet: 'Curriculm2TabletImage',
+  mobile: 'Curriculm2TabletImage',
 };
