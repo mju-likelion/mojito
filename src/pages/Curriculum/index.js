@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import SvgComponent from '../../components/SvgComponent';
 
-import { CurriculumTextData, CurriculumChartData, ArrowImgData } from './AssetsData';
+import { CurriculumChartData, ArrowImgData } from './AssetsData';
 import Hackathon from './Hackathon';
 import Ideathon from './Ideathon';
 import Study from './Study';
@@ -36,7 +36,14 @@ const Curriculum = () => {
       <Container>
         <RoadmapText>ROADMAP</RoadmapText>
         <PartCurriculumTitle>파트 및 커리큘럼</PartCurriculumTitle>
-        <PartCurriculumText>{width && CurriculumTextData[width]}</PartCurriculumText>
+        <PartCurriculumText>
+          멋쟁이사자처럼 명지대(자연) 11기에서는 <MobileBreakLine />
+          웹, 서버, 기획/디자인 파트로 나누어 진행됩니다. <MobileBreakLine />
+          <DesktopTabletBreakLine />각 파트별로 회원들의 실력 향상과 프로젝트 아웃풋을 <MobileBreakLine />
+          위한 각 파트별 커리큘럼이 운영되며, <DesktopTabletBreakLine />
+          다른 파트와의 <MobileBreakLine />
+          크로스오버로 협업을 위한 과정을 배워갑니다.
+        </PartCurriculumText>
         {width === 'mobile' ? (
           <>
             {CurriculumChartData[width].map((chart, i) => (
@@ -90,7 +97,7 @@ export const DeskTopBreakLine = styled.br`
   }
 `;
 
-export const MobileBreakLine = styled.br`
+export const MobileTabletBreakLine = styled.br`
   display: block;
   @media ${({ theme }) => theme.devices.DESKTOP} {
     display: none;
@@ -98,6 +105,7 @@ export const MobileBreakLine = styled.br`
 `;
 
 export const BlueTitle = styled.div`
+  box-sizing: border-box;
   display: inline-block;
   border: 1px solid ${({ theme }) => theme.colors.BLUE1};
   color: ${({ theme }) => theme.colors.BLUE1};
@@ -125,8 +133,6 @@ export const EventText = styled.div`
     font-weight: 700;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
-    width: 557px;
-    height: 120px;
     font-size: 15px;
     line-height: 26px;
   }
@@ -164,20 +170,27 @@ const RoadmapText = styled.p`
   font-size: 10px;
   color: ${({ theme }) => theme.colors.BLUE1};
   font-weight: 500;
+  line-height: 13px;
 
   @media ${({ theme }) => theme.devices.DESKTOP} {
     font-size: 16px;
+    line-height: 20px;
   }
 `;
 
 const PartCurriculumTitle = styled.p`
   font-weight: 700;
   color: white;
-  font-size: 26px;
+  font-size: 22px;
+  line-height: 30px;
   margin: 4px 0 8px 0;
-
+  @media ${({ theme }) => theme.devices.TABLET} {
+    font-size: 26px;
+    line-height: 34px;
+  }
   @media ${({ theme }) => theme.devices.DESKTOP} {
     font-size: 40px;
+    line-height: 56px;
     margin: 8px 0 12px 0;
   }
 `;
@@ -201,11 +214,26 @@ const PartCurriculumText = styled.p`
   }
 `;
 
+const DesktopTabletBreakLine = styled.br`
+  display: none;
+  @media ${({ theme }) => theme.devices.TABLET} {
+    display: block;
+  }
+`;
+
+const MobileBreakLine = styled.br`
+  display: block;
+  @media ${({ theme }) => theme.devices.TABLET} {
+    display: none;
+  }
+`;
+
 const Chart = styled.div`
   margin-bottom: 62px;
   width: 318px;
   height: 510px;
   @media ${({ theme }) => theme.devices.TABLET} {
+    margin-bottom: 0;
     width: 568px;
     height: 618px;
   }
@@ -218,31 +246,33 @@ const Chart = styled.div`
 const EventBackground = styled.div`
   display: flex;
   width: 318px;
-  margin: 80px auto 80px auto;
+  margin: 80px auto;
   @media ${({ theme }) => theme.devices.TABLET} {
     justify-content: flex-end;
     width: 568px;
-    margin: 100px auto 0 auto;
+    margin: 100px auto;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
     width: 1200px;
-    margin: 160px auto 0 auto;
+    margin: 160px auto;
   }
 `;
 
 const EventContainer = styled.div`
   display: grid;
-  grid-template-columns: 255px 43px 264px;
+  grid-template-columns: 257px 43px 264px;
   grid-template-rows: 274px 233px 214px;
 
   @media ${({ theme }) => theme.devices.DESKTOP} {
-    grid-template-columns: 432px 54px 572px;
+    grid-template-columns: 395px 69px 572px;
     grid-template-rows: 334px 338px 308px;
   }
 `;
 
 const ArrowContainer = styled.div`
   @media ${({ theme }) => theme.devices.TABLET} {
+    display: flex;
+    justify-content: flex-end;
     grid-row: 1/-1;
     grid-column: 2/3;
   }

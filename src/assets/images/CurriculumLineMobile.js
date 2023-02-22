@@ -1,6 +1,6 @@
 const CurriculumLineMobile = () => {
   return (
-    <svg width="43" height="901" viewBox="0 0 43 901" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="43" height="841" viewBox="0 0 43 901" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M23.0878 894.705L23.0877 0.5L19.4996 0.5L19.4997 900.5L21.2938 900.5L22.4299 900.5L23.228 900.5L23.3525 900.5L40.2792 884.203L37.7548 881.766L23.9345 895.065L23.0878 895.88L23.0878 894.705Z"
         fill="#547AFF"
