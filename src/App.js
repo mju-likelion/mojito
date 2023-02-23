@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import ChannelService from './components/ChannelTalk/ChannelService';
 import FloatingButton from './components/ChannelTalk/FloatingButton';
 import Main from './pages/Main';
+import Networking from './pages/Networking';
 import GlobalStyle from './styles/GlobalStyle';
 import { Theme } from './styles/Theme';
 
@@ -19,6 +20,7 @@ function App() {
         <GlobalStyle />
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/networking" element={<Networking />} />
         </Routes>
         <FloatingButton />
       </ThemeProvider>
