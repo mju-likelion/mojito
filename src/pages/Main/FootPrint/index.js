@@ -6,11 +6,13 @@ import { ReactComponent as TabletProjectImages } from '../../../assets/images/pr
 import { ReactComponent as FolderTop } from '../../../assets/images/Subtract.svg';
 import Button from '../../../components/Button';
 
+import ResponsiveBody from './../../../components/ResponsiveBody';
+import FootPrintContent from './FootPrintContent';
+
 const FootPrint = () => {
+  const { mobileContent, tabletContent } = FootPrintContent;
   return (
     <>
-      {/* 컴포넌트 영역 분리를 위해 임시적으로 hr태그를 사용하였습니다. */}
-      <hr />
       <FolderTopLine>
         <FolderTopLineSvg />
       </FolderTopLine>
@@ -21,11 +23,7 @@ const FootPrint = () => {
             명지대 멋사 프로젝트 발자국 <span>소개</span>
           </IntroductionTitle>
           <IntroductionContentText>
-            멋쟁이사자처럼 명지대(자연)이 수 년간 쌓아온
-            <MobileBreakLine /> 프로젝트들의 기록입니다.
-            <DeskTopBreakLine /> 끝 없는 오류와 치열한
-            <MobileBreakLine /> 논쟁의 끝에서, 마침내 선배기수들이 만들어 낸<br />
-            멋쟁이사자처럼 프로젝트의 결과물을 확인해보세요.
+            <ResponsiveBody mobileText={mobileContent} tabletText={tabletContent} desktopText={tabletContent} />
           </IntroductionContentText>
         </FolerTextBox>
         <ButtonBox>
@@ -47,7 +45,6 @@ const FootPrint = () => {
           <ProjectImagesInPc />
         </PorjectTagBox>
       </FolderContainer>
-      <hr />
     </>
   );
 };
@@ -187,6 +184,7 @@ const IntroductionContentText = styled.p`
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
+  white-space: pre-wrap;
   @media ${({ theme }) => theme.devices.TABLET} {
     font-size: 14px;
     line-height: 20px;
@@ -217,20 +215,6 @@ const PorjectTagBox = styled.div`
   @media ${({ theme }) => theme.devices.DESKTOP} {
     margin: 78px 70px 35px;
     height: 270px;
-  }
-`;
-
-const MobileBreakLine = styled.br`
-  display: block;
-  @media ${({ theme }) => theme.devices.TABLET} {
-    display: none;
-  }
-`;
-
-const DeskTopBreakLine = styled.br`
-  display: none;
-  @media ${({ theme }) => theme.devices.TABLET} {
-    display: block;
   }
 `;
 
