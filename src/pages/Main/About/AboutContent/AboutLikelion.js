@@ -71,14 +71,12 @@ const ARTICELS = [
 
 const Wrapper = styled.div`
   width: 278px;
-  margin: 0 56px 0 16px;
+  margin: 0 auto;
   @media ${({ theme }) => theme.devices.TABLET} {
     width: 520px;
-    margin: 0 64px 0 16px;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
     width: 1200px;
-    margin: 0 auto;
   }
 `;
 

@@ -11,7 +11,10 @@ const About = () => {
       <AboutMJU />
 
       <ButtonWrapper>
-        <Button text={'지원하기'} handleClick={() => window.open('https://mjulikelion-apply.netlify.app/', '_blank')} />
+        <Button
+          text={'지원하기'}
+          handleClick={null /*() => window.open('https://mjulikelion-apply.netlify.app/', '_blank')*/}
+        />
       </ButtonWrapper>
     </Wrapper>
   );

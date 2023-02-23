@@ -1,26 +1,18 @@
 import styled from 'styled-components';
 
 import Slogan from '../../../assets/images/Slogan';
-import useWindowReszie from '../../../hooks/useWindowResize';
+import ResponsiveBody from '../../../components/ResponsiveBody';
 
 const Banner = () => {
-  const [size] = useWindowReszie();
-  const { width, height } = SloganSize(size);
   return (
     <Container>
-      <Slogan width={width} height={height} />
+      <ResponsiveBody
+        desktopText={<Slogan width={'1200'} height={'370'} />}
+        tabletText={<Slogan width={'568'} height={'176'} />}
+        mobileText={<Slogan width={'318'} height={'100'} />}
+      />
     </Container>
   );
-};
-
-const SloganSize = size => {
-  if (size.width >= 1200) {
-    return { width: '1200', height: '370' };
-  } else if (size.width >= 600) {
-    return { width: '568', height: '176' };
-  } else {
-    return { width: '318', height: '100' };
-  }
 };
 
 /** @TODO hanjo: 모바일, 태블릿 스타일링 적용 필요 */
