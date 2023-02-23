@@ -9,8 +9,8 @@ const Main = () => {
     <>
       <Banner />
       <About />
-      <Recruit />
       <FootPrint />
+      <Recruit />
       <OfficialApply />
     </>
   );
