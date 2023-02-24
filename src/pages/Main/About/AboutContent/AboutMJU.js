@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import ArticleImageCard from './../../../../components/ArticleImageCard';
-import { FILE_NAME } from './AboutFileData';
+import { ABOUT_MJU_LIEKLIONS } from './AboutFileData';
 
 /** @TODO TABLE 버전 UI 추가하기 */
 const AboutMJU = () => {
@@ -11,17 +11,17 @@ const AboutMJU = () => {
       <Hr />
       <Article>
         <PcImages>
-          {FILE_NAME.pc.map((item, index) => (
+          {ABOUT_MJU_LIEKLIONS.pc.map((item, index) => (
             <ArticleImageCard key={index} image={item.image} title={item.title} text={item.text} />
           ))}
         </PcImages>
         <TabletImages>
-          {FILE_NAME.tablet.map((item, index) => (
+          {ABOUT_MJU_LIEKLIONS.tablet.map((item, index) => (
             <ArticleImageCard key={index} image={item.image} title={item.title} text={item.text} />
           ))}
         </TabletImages>
         <MobileImages>
-          {FILE_NAME.mobile.map((item, index) => (
+          {ABOUT_MJU_LIEKLIONS.mobile.map((item, index) => (
             <ArticleImageCard key={index} image={item.image} title={item.title} text={item.text} />
           ))}
         </MobileImages>

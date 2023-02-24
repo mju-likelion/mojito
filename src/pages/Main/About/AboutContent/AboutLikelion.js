@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 import ArticleIconCard from '../../../../components/ArticleIconCard';
 
+import { ARTICELS } from './AboutFileData';
+
 const AboutLikelion = () => {
   return (
     <Wrapper>
@@ -21,53 +23,6 @@ const AboutLikelion = () => {
     </Wrapper>
   );
 };
-
-const ARTICELS = [
-  {
-    id: 0,
-    iconName: 'IllustOnOff',
-    title: '온/오프라인 학습',
-    text: {
-      pc: '각 학교별 스터디를 통해\n웹 개발을 학습합니다.',
-      tablet: '각 학교별 스터디를 통해 웹 개발을 학습합니다.',
-      mobile: '각 학교별 스터디를 통해 웹 개발을 학습합니다.',
-    },
-  },
-  {
-    id: 1,
-    iconName: 'IllustService',
-    title: '서비스 빌딩을 위한 입체적 교육',
-    text: {
-      pc: `멋대에서는 웹 개발 교육 뿐만 아니라\n서비스 기획, UX/UI 디자인 등 자신의\n서비스를 빌딩하기 위한 다양한\n역량을 배울 수 있습니다.`,
-      tablet: `멋대에서는 웹 개발 교육 뿐만 아니라\n서비스 기획, UX/UI 디자인 등 자신의 서비스를\n빌딩하기 위한 다양한 역량을 배울 수 있습니다.`,
-      mobile: `멋대에서는 웹 개발 교육 뿐만 아니라\n서비스 기획, UX/UI 디자인 등 자신의 서비스를\n빌딩하기 위한 다양한 역량을 배울 수 있습니다.`,
-    },
-  },
-  {
-    id: 2,
-    iconName: 'IllustIdea',
-    title: '아이디어톤',
-    text: {
-      pc: '팀프로젝트를 통해 실현하고 싶은\n아이디어(웹서비스)를 발표하는 자리이며\n전국의 멋대 학생들이 모여 아이디어를\n공유하는 네트워킹의 장입니다.',
-      tablet:
-        '팀프로젝트를 통해 실현하고 싶은\n아이디어(웹서비스)를 발표하는 자리이며\n전국의 멋대 학생들이 모여 아이디어를\n공유하는 네트워킹의 장입니다.',
-      mobile:
-        '팀프로젝트를 통해 실현하고 싶은\n아이디어(웹서비스)를 발표하는 자리이며\n전국의 멋대 학생들이 모여 아이디어를\n공유하는 네트워킹의 장입니다.',
-    },
-  },
-  {
-    id: 3,
-    iconName: 'IllustHack',
-    title: '해커톤',
-    text: {
-      pc: '실제 아이디어가 구현되는 축제의 장입니다.\n수 주간의 아이디어 빌드업과 프로그래밍에\n이어 해커톤 당일의 밤샘 코딩 및 최종 발표를\n통해 아이디어를 구현하고 소개합니다.',
-      tablet:
-        '실제 아이디어가 구현되는 축제의 장입니다.\n수 주간의 아이디어 빌드업과 프로그래밍에 이어\n해커톤 당일의 밤샘 코딩 및 최종 발표를 통해\n아이디어를 구현하고 소개합니다.',
-      mobile:
-        '실제 아이디어가 구현되는 축제의 장입니다.\n수 주간의 아이디어 빌드업과 프로그래밍에 이어\n해커톤 당일의 밤샘 코딩 및 최종 발표를 통해\n아이디어를 구현하고 소개합니다.',
-    },
-  },
-];
 
 const Wrapper = styled.div`
   width: 278px;
