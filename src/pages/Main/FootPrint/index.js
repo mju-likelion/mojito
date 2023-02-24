@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import { ReactComponent as MobileProjectImages } from '../../../assets/images/project_mobile.svg';
-import { ReactComponent as PcProjectImages } from '../../../assets/images/project_pc.svg';
-import { ReactComponent as TabletProjectImages } from '../../../assets/images/project_tablet.svg';
+import MobileProjectImages from '../../../assets/images/MobileProjectImages.png';
+import PcProjectImages from '../../../assets/images/PcProjectImages.png';
 import { ReactComponent as FolderTop } from '../../../assets/images/Subtract.svg';
+import TabletProjectImages from '../../../assets/images/TabletProjectImages.png';
 import Button from '../../../components/Button';
 
 import ResponsiveBody from './../../../components/ResponsiveBody';
@@ -40,23 +40,29 @@ const FootPrint = () => {
           />
         </ButtonBox>
         <PorjectTagBox>
-          <ProjectImagesInMobile />
-          <ProjectImagesInTablet />
-          <ProjectImagesInPc />
+          <ProjectImagesInMobile>
+            <img src={MobileProjectImages} />
+          </ProjectImagesInMobile>
+          <ProjectImagesInTablet>
+            <img src={TabletProjectImages} />
+          </ProjectImagesInTablet>
+          <ProjectImagesInPc>
+            <img src={PcProjectImages} />
+          </ProjectImagesInPc>
         </PorjectTagBox>
       </FolderContainer>
     </>
   );
 };
 
-const ProjectImagesInMobile = styled(MobileProjectImages)`
+const ProjectImagesInMobile = styled.div`
   display: block;
   @media ${({ theme }) => theme.devices.TABLET} {
     display: none;
   }
 `;
 
-const ProjectImagesInTablet = styled(TabletProjectImages)`
+const ProjectImagesInTablet = styled.div`
   display: none;
   @media ${({ theme }) => theme.devices.TABLET} {
     display: block;
@@ -66,7 +72,7 @@ const ProjectImagesInTablet = styled(TabletProjectImages)`
   }
 `;
 
-const ProjectImagesInPc = styled(PcProjectImages)`
+const ProjectImagesInPc = styled.div`
   display: none;
   @media ${({ theme }) => theme.devices.DESKTOP} {
     display: block;
@@ -158,7 +164,7 @@ const FolderTitle = styled.p`
   }
 `;
 
-const IntroductionTitle = styled.p`
+const IntroductionTitle = styled.div`
   font-weight: 700;
   font-size: 22px;
   line-height: 30px;
@@ -180,7 +186,7 @@ const IntroductionTitle = styled.p`
   }
 `;
 
-const IntroductionContentText = styled.p`
+const IntroductionContentText = styled.div`
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
