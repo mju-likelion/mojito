@@ -1,4 +1,4 @@
-# [MJU LIKELION OFFICIAL Project] (https://beta.mju-likelion.com/)
+# [MJU LIKELION OFFICIAL Project](https://beta.mju-likelion.com/)
 
 ## 📂 Folder Structure
 
