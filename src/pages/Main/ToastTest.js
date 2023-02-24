@@ -9,26 +9,18 @@ import Toast from '../../components/Toast';
 const ToastTest = () => {
   const [toast, setToast] = useState(false);
   const [isCopySuccess, setIsCopySuccess] = useState(false);
+
+  const handleClick = (toastBool, isSuccessBool) => {
+    setToast(toastBool);
+    setIsCopySuccess(isSuccessBool);
+  };
+
   return (
     <Testbox>
       토스트 메시지 테스트
       <br />
-      <Testbtn
-        onClick={() => {
-          setToast(true);
-          setIsCopySuccess(true);
-        }}
-      >
-        성공
-      </Testbtn>
-      <Testbtn
-        onClick={() => {
-          setToast(true);
-          setIsCopySuccess(false);
-        }}
-      >
-        실패
-      </Testbtn>
+      <Testbtn onClick={() => handleClick(true, true)}>성공</Testbtn>
+      <Testbtn onClick={() => handleClick(true, false)}>실패</Testbtn>
       {toast && (
         <Toast
           setToast={setToast}

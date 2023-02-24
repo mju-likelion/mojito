@@ -17,11 +17,11 @@ const Toast = ({ setToast, isSuccess, text }) => {
 
   return (
     <ToastBox>
-      <ToastTypeIcon src={isSuccess ? toastSuccessIcon : toastErrorIcon} />
-      <ToastTypeMsgBox>
-        <ToastTypeMsg>{text}</ToastTypeMsg>
-        {!isSuccess && <ToastErrorMsg>잠시 후에 다시 시도해주세요</ToastErrorMsg>}
-      </ToastTypeMsgBox>
+      <TypeIcon src={isSuccess ? toastSuccessIcon : toastErrorIcon} />
+      <TypeMsgBox>
+        <TypeMsg>{text}</TypeMsg>
+        {!isSuccess && <ErrorMsg>잠시 후에 다시 시도해주세요</ErrorMsg>}
+      </TypeMsgBox>
     </ToastBox>
   );
 };
@@ -54,20 +54,20 @@ const ToastBox = styled.div`
   animation-fill-mode: forwards;
 `;
 
-const ToastTypeIcon = styled.img`
+const TypeIcon = styled.img`
   margin-left: 16px;
 `;
 
-const ToastTypeMsgBox = styled.div`
+const TypeMsgBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
   align-items: flex-start;
 `;
 
-const ToastTypeMsg = styled.div``;
+const TypeMsg = styled.div``;
 
-const ToastErrorMsg = styled.div`
+const ErrorMsg = styled.div`
   font-size: 12px;
   color: ${({ theme }) => theme.colors.GRAY2};
 `;
