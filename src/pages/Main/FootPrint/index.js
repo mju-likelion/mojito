@@ -10,7 +10,7 @@ import ResponsiveBody from './../../../components/ResponsiveBody';
 import FootPrintContent from './FootPrintContent';
 
 const FootPrint = () => {
-  const { mobileContent, tabletContent } = FootPrintContent;
+  const { mobileContent, tabletContent, desktopContent } = FootPrintContent;
   return (
     <>
       <FolderTopLine>
@@ -23,7 +23,7 @@ const FootPrint = () => {
             명지대 멋사 프로젝트 발자국 <span>소개</span>
           </IntroductionTitle>
           <IntroductionContentText>
-            <ResponsiveBody mobileText={mobileContent} tabletText={tabletContent} desktopText={tabletContent} />
+            <ResponsiveBody mobileText={mobileContent} tabletText={tabletContent} desktopText={desktopContent} />
           </IntroductionContentText>
         </FolerTextBox>
         <ButtonBox>

@@ -5,11 +5,11 @@ import ResponsiveBody from '../../../components/ResponsiveBody';
 
 import OFFICIAL_APPLY_CONTENT from './OfficialApplyContent';
 const OfficialApply = () => {
-  const { mobileContent, tabletContent } = OFFICIAL_APPLY_CONTENT;
+  const { mobileContent, tabletContent, desktopContent } = OFFICIAL_APPLY_CONTENT;
   return (
     <Container>
       <ContentText>
-        <ResponsiveBody mobileText={mobileContent} tabletText={tabletContent} desktopText={tabletContent} />
+        <ResponsiveBody mobileText={mobileContent} tabletText={tabletContent} desktopText={desktopContent} />
         <ProposeText>저희와 함께 가실까요?</ProposeText>
       </ContentText>
       <ButtonBox>
