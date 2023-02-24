@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import SvgComponent from '../../components/SvgComponent';
+import SvgComponent from '../../../components/SvgComponent';
 
 import { HackathonImageData } from './AssetsData';
 

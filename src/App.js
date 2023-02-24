@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 import ChannelService from './components/ChannelTalk/ChannelService';
 import FloatingButton from './components/ChannelTalk/FloatingButton';
-import Curriculum from './pages/Curriculum';
+import Footer from './components/Footer/Footer';
 import Main from './pages/Main';
 import GlobalStyle from './styles/GlobalStyle';
 import { Theme } from './styles/Theme';
@@ -19,9 +19,10 @@ function App() {
       <ThemeProvider theme={Theme}>
         <GlobalStyle />
         <Routes>
-          <Route path="/" element={<Curriculum />} />
+          <Route path="/" element={<Main />} />
         </Routes>
         <FloatingButton />
+        <Footer />
       </ThemeProvider>
     </BrowserRouter>
   );

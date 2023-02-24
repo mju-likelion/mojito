@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import styled from 'styled-components';
 
-import SvgComponent from '../../components/SvgComponent';
+import SvgComponent from '../../../components/SvgComponent';
 
 import { CurriculumChartData, ArrowImgData } from './AssetsData';
 import Hackathon from './Hackathon';
