@@ -1,9 +1,30 @@
-# [MJU LIKELION OFFICIAL Project]
+# [MJU LIKELION OFFICIAL Project] (https://beta.mju-likelion.com/)
 
 ## 📂 Folder Structure
 
 ```
-
+├── 📂 public
+│
+├── 📂 src
+│   ├── 📂 api
+│   ├── 📂 assets
+│   │    └── 📂 imgs
+│   │
+│   ├── 📂 atoms
+│   ├── 📂 components
+│   │    ├── 📂 ChannelTalk
+│   │    └── 📂 Footer
+│   │
+│   ├── 📂 hooks
+│   ├── 📂 pages
+│   │    ├── 📂 Main
+│   │    └── 📂 Networking
+│   │
+│   └── 📂 styles
+│
+├── 📝 App.css,App.js,index.css,index.js ...
+│
+└── 🛠package.json,README.md,gitignore...
 ```
 
 ## 🛠 Tech Stack
