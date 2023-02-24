@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 
 import Slogan from '../../../assets/images/Slogan';
+import ResponsiveBody from '../../../components/ResponsiveBody';
 
 const Banner = () => {
   return (
     <Container>
-      <Slogan />
+      <ResponsiveBody
+        desktopText={<Slogan width={'1200'} height={'370'} />}
+        tabletText={<Slogan width={'568'} height={'176'} />}
+        mobileText={<Slogan width={'318'} height={'100'} />}
+      />
     </Container>
   );
 };
