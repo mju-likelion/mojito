@@ -45,7 +45,7 @@ const HeaderBox = styled.div`
 const NavigationBox = styled.div`
   display: flex;
   margin-left: auto;
-  font-size: 16px;
+  font-size: 10px;
   font-weight: 700;
   gap: 16px;
   font-family: Montserrat;

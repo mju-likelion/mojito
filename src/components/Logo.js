@@ -4,8 +4,20 @@ import { ReactComponent as BigLogo } from '../assets/images/logo_big.svg';
 import { ReactComponent as SmallLogo } from '../assets/images/logo_small.svg';
 
 const Logo = () => {
+  const scrollToTop = () => {
+    const scroll = window.setInterval(() => {
+      const pageScrollY = window.scrollY;
+      const step = 70;
+      if (pageScrollY > 0) {
+        window.scrollTo(0, pageScrollY - step);
+      } else {
+        window.clearInterval(scroll);
+      }
+    }, 8);
+  };
+
   const handleLogoClick = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    scrollToTop();
   };
 
   return (
