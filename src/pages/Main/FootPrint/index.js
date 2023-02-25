@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import MobileProjectImages from '../../../assets/images/MobileProjectImages.png';
-import PcProjectImages from '../../../assets/images/PcProjectImages.png';
+import ProjectImagesForDesktop from '../../../assets/images/FootPrint/ProjectImagesForDesktop.png';
+import ProjectImagesForMobile from '../../../assets/images/FootPrint/ProjectImagesForMobile.png';
+import ProjectImagesForTablet from '../../../assets/images/FootPrint/ProjectImagesForTablet.png';
 import { ReactComponent as FolderTop } from '../../../assets/images/Subtract.svg';
-import TabletProjectImages from '../../../assets/images/TabletProjectImages.png';
 import Button from '../../../components/Button';
 
 import ResponsiveBody from './../../../components/ResponsiveBody';
@@ -41,13 +41,13 @@ const FootPrint = () => {
         </ButtonBox>
         <PorjectTagBox>
           <ProjectImagesInMobile>
-            <img src={MobileProjectImages} />
+            <ProjectImage src={ProjectImagesForMobile} />
           </ProjectImagesInMobile>
           <ProjectImagesInTablet>
-            <img src={TabletProjectImages} />
+            <ProjectImage src={ProjectImagesForTablet} />
           </ProjectImagesInTablet>
           <ProjectImagesInPc>
-            <img src={PcProjectImages} />
+            <ProjectImage src={ProjectImagesForDesktop} />
           </ProjectImagesInPc>
         </PorjectTagBox>
       </FolderContainer>
@@ -222,6 +222,11 @@ const PorjectTagBox = styled.div`
     margin: 78px 70px 35px;
     height: 270px;
   }
+`;
+
+const ProjectImage = styled.img`
+  width: 100%;
+  height: 100%;
 `;
 
 export default FootPrint;
