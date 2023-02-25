@@ -15,14 +15,20 @@ const Banner = () => {
   );
 };
 
-/** @TODO hanjo: 모바일, 태블릿 스타일링 적용 필요 */
 const Container = styled.div`
   width: 100%;
-  height: 620px;
+  height: 198px;
   background-color: ${({ theme }) => theme.colors.BLUE1};
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media ${({ theme }) => theme.devices.TABLET} {
+    height: 300px;
+  }
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    height: 620px;
+  }
 `;
 
 export default Banner;
