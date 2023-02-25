@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import ProjectImagesForDesktop from '../../../assets/images/FootPrint/ProjectImagesForDesktop.png';
-import ProjectImagesForMobile from '../../../assets/images/FootPrint/ProjectImagesForMobile.png';
-import ProjectImagesForTablet from '../../../assets/images/FootPrint/ProjectImagesForTablet.png';
+import ProjectImagesForDesktop from '../../../assets/images/Project/ProjectImagesForDesktop.png';
+import ProjectImagesForMobile from '../../../assets/images/Project/ProjectImagesForMobile.png';
+import ProjectImagesForTablet from '../../../assets/images/Project/ProjectImagesForTablet.png';
 
 const ProjectImageBox = () => {
   return (

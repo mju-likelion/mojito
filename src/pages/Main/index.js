@@ -1,7 +1,7 @@
 import About from './About';
 import Banner from './Banner';
-import FootPrint from './FootPrint';
 import OfficialApply from './OfficialApply';
+import Project from './Project';
 import Recruit from './Recruit';
 
 const Main = () => {
@@ -9,7 +9,7 @@ const Main = () => {
     <>
       <Banner />
       <About />
-      <FootPrint />
+      <Project />
       <Recruit />
       <OfficialApply />
     </>

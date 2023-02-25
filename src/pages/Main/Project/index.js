@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 import { ReactComponent as FolderTop } from '../../../assets/images/Subtract.svg';
 import Button from '../../../components/Button';
+import ResponsiveBody from '../../../components/ResponsiveBody';
 
-import ResponsiveBody from './../../../components/ResponsiveBody';
-import FootPrintContent from './FootPrintContent';
+import ProjectContent from './ProjectContent';
 import ProjectImageBox from './ProjectImageBox';
 
-const FootPrint = () => {
-  const { mobileContent, tabletContent, desktopContent } = FootPrintContent;
+const Project = () => {
+  const { mobileContent, tabletContent, desktopContent } = ProjectContent;
   return (
     <>
       <FolderTopLine>
@@ -174,4 +174,4 @@ const ButtonBox = styled.a`
   }
 `;
 
-export default FootPrint;
+export default Project;
