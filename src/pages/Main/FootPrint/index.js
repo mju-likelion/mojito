@@ -41,13 +41,13 @@ const FootPrint = () => {
         </ButtonBox>
         <PorjectTagBox>
           <ProjectImagesInMobile>
-            <ProjectImage src={ProjectImagesForMobile} />
+            <ProjectImage alt="ProjectImagesForMobile" src={ProjectImagesForMobile} />
           </ProjectImagesInMobile>
           <ProjectImagesInTablet>
-            <ProjectImage src={ProjectImagesForTablet} />
+            <ProjectImage alt="ProjectImagesForTablet" src={ProjectImagesForTablet} />
           </ProjectImagesInTablet>
           <ProjectImagesInPc>
-            <ProjectImage src={ProjectImagesForDesktop} />
+            <ProjectImage alt="ProjectImagesForDesktop" src={ProjectImagesForDesktop} />
           </ProjectImagesInPc>
         </PorjectTagBox>
       </FolderContainer>
