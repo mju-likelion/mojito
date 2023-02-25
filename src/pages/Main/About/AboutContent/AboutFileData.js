@@ -62,7 +62,7 @@ export const ABOUT_MJU_LIEKLIONS = {
   ],
 };
 
-export const ARTICELS = [
+export const ARTICLES = [
   {
     id: 0,
     iconName: 'IllustOnOff',

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import ArticleIconCard from '../../../../components/ArticleIconCard';
 
-import { ARTICELS } from './AboutFileData';
+import { ARTICLES } from './AboutFileData';
 
 const AboutLikelion = () => {
   return (
@@ -16,7 +16,7 @@ const AboutLikelion = () => {
         </p>
       </TitleWrapper>
       <Article>
-        {ARTICELS.map(item => (
+        {ARTICLES.map(item => (
           <ArticleIconCard key={item.id} iconName={item.iconName} title={item.title} text={item.text} />
         ))}
       </Article>
