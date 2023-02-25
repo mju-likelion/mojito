@@ -9,24 +9,18 @@ import SvgComponent from './SvgComponent';
  * */
 const ArticleImageCard = ({ imageName = null, title = '', text = '' }) => {
   return (
-    <Wrapper>
-      {imageName && <ImageBox>{SvgComponent(imageName)}</ImageBox>}
-      <TextBox>
-        <h1>{title}</h1>
-        <p>{text}</p>
-      </TextBox>
-    </Wrapper>
+    <>
+      {imageName && <>{SvgComponent(imageName)}</>}
+      {title && text && (
+        <TextBox>
+          <h1>{title}</h1>
+          <p>{text}</p>
+        </TextBox>
+      )}
+    </>
   );
 };
 
-const Wrapper = styled.div`
-  width: 376px;
-  height: 372px;
-`;
-const ImageBox = styled.div`
-  width: 100%;
-  height: 232px;
-`;
 const TextBox = styled.div`
   p {
     color: ${({ theme }) => theme.colors.GRAY2};
