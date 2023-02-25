@@ -21,7 +21,8 @@ const Header = () => {
     <Wrapper>
       <HeaderTopBox>
         <HeaderBox>
-          <Logo />
+          <Logo setOpenDropDown={setOpenDropDown} />
+          {/*이렇게 쓰는거 지양하라고 하셨는데 추후 리팩터링 해보겠습니당...*/}
           <NavigationBox>
             {NAVIGATION_LIST.map(item => (
               <NavigationItem href={item.ref} key={item.id} onClick={() => navigate(item.path)}>
@@ -37,6 +38,7 @@ const Header = () => {
         </HeaderBox>
       </HeaderTopBox>
       {isDropDownOpen && <DropDownMenu setOpenDropDown={setOpenDropDown} />}
+      {/*이렇게 쓰는거 지양하라고 하셨는데 추후 리팩터링 해보겠습니당22...*/}
     </Wrapper>
   );
 };
