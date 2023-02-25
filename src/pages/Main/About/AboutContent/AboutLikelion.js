@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import ArticleIconCard from '../../../../components/ArticleIconCard';
+import ResponsiveBody from '../../../../components/ResponsiveBody';
 
 const AboutLikelion = () => {
   return (
@@ -8,10 +9,9 @@ const AboutLikelion = () => {
       <TitleWrapper>
         <h3>ABOUT</h3>
         <h1>멋쟁이사자처럼 대학이란?</h1>
-        <p>
-          멋쟁이사자처럼 대학은 테크 기반의 아이디어 실현을 위한 <br />
-          전국 최대 규모의 대학 연합 IT/창업 동아리입니다.
-        </p>
+        <MobileText>{BODY_TEXT.mobile}</MobileText>
+        <TabletText>{BODY_TEXT.tablet}</TabletText>
+        <DesktopText>{BODY_TEXT.pc}</DesktopText>
       </TitleWrapper>
       <Article>
         {ARTICELS.map(item => (
@@ -69,6 +69,12 @@ const ARTICELS = [
   },
 ];
 
+const BODY_TEXT = {
+  mobile: `멋쟁이사자처럼 대학은 테크 기반의 아이디어 실현을\n위한 전국 최대 규모의 대학 연합 IT/창업 동아리입니다.`,
+  tablet: `멋쟁이사자처럼 대학은 테크 기반의 아이디어 실현을 위한\n전국 최대 규모의 대학 연합 IT/창업 동아리입니다.`,
+  pc: `멋쟁이사자처럼 대학은 테크 기반의 아이디어 실현을 위한\n전국 최대 규모의 대학 연합 IT/창업 동아리입니다.`,
+};
+
 const Wrapper = styled.div`
   width: 278px;
   margin: 0 auto;
@@ -97,13 +103,6 @@ const TitleWrapper = styled.div`
     height: 13px;
     margin-bottom: 4px;
   }
-  p {
-    color: ${({ theme }) => theme.colors.GRAY2};
-    font-weight: 400;
-    height: 36px;
-    font-size: 12px;
-    line-height: 18px;
-  }
   margin-bottom: 60px;
 
   @media ${({ theme }) => theme.devices.TABLET} {
@@ -113,11 +112,6 @@ const TitleWrapper = styled.div`
       height: 34px;
       line-height: 34px;
       margin-bottom: 8px;
-    }
-    p {
-      height: 40px;
-      font-size: 14px;
-      line-height: 20px;
     }
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
@@ -137,18 +131,53 @@ const TitleWrapper = styled.div`
       line-height: 20px;
       margin-bottom: 8px;
     }
+  }
+`;
 
-    p {
-      height: 56px;
-      font-size: 18px;
-      line-height: 28px;
-    }
+const MobileText = styled.p`
+  color: ${({ theme }) => theme.colors.GRAY2};
+  height: 36px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  white-space: pre-wrap;
+  @media ${({ theme }) => theme.devices.TABLET} {
+    display: none;
+  }
+`;
+const TabletText = styled.p`
+  display: none;
+  color: ${({ theme }) => theme.colors.GRAY2};
+  height: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  white-space: pre-wrap;
+  @media ${({ theme }) => theme.devices.TABLET} {
+    display: block;
+  }
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    display: none;
+  }
+`;
+
+const DesktopText = styled.p`
+  display: none;
+  color: ${({ theme }) => theme.colors.GRAY2};
+  height: 56px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  white-space: pre-wrap;
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    display: block;
   }
 `;
 
 const Article = styled.div`
   display: flex;
   flex-wrap: wrap;
+  gap: 18px 0;
   @media ${({ theme }) => theme.devices.TABLET} {
     width: 568px;
     gap: 0 16px;
