@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
-
 import styled from 'styled-components';
 
+import ResponsiveBody from '../../../components/ResponsiveBody';
 import SvgComponent from '../../../components/SvgComponent';
 
 import { CurriculumChartData, ArrowImgData } from './AssetsData';
@@ -9,28 +8,7 @@ import Hackathon from './Hackathon';
 import Ideathon from './Ideathon';
 import Study from './Study';
 
-const DESKTOP_WIDTH = 1199;
-const TABLET_WIDTH = 599;
-
 const Curriculum = () => {
-  const [width, setwidth] = useState('desktop');
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    handleResize();
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const handleResize = () => {
-    if (window.innerWidth > DESKTOP_WIDTH) {
-      setwidth('desktop');
-    } else if (window.innerWidth > TABLET_WIDTH) {
-      setwidth('tablet');
-    } else {
-      setwidth('mobile');
-    }
-  };
-
   return (
     <Background>
       <Container>
@@ -44,45 +22,67 @@ const Curriculum = () => {
           다른 파트와의 <MobileBreakLine />
           크로스오버로 협업을 위한 과정을 배워갑니다.
         </PartCurriculumText>
-        {width === 'mobile' ? (
-          <>
-            {CurriculumChartData[width].map((chart, i) => (
-              <Chart key={i}>{SvgComponent(chart)}</Chart>
-            ))}
-            <EventBackground>
-              <MobileArrowContainer>{SvgComponent(ArrowImgData[width])}</MobileArrowContainer>
-              <MobileEventContainer>
-                <EventSection>
-                  <Ideathon />
-                </EventSection>
-                <EventSection>
-                  <Hackathon width={width} />
-                </EventSection>
-                <EventSection>
-                  <Study />
-                </EventSection>
-              </MobileEventContainer>
-            </EventBackground>
-          </>
-        ) : (
-          <>
-            <Chart>{SvgComponent(CurriculumChartData[width])}</Chart>
-            <EventBackground>
-              <EventContainer>
-                <IdeathonWrapper>
-                  <Ideathon />
-                </IdeathonWrapper>
-                <StudyWrapper>
-                  <Study />
-                </StudyWrapper>
-                <ArrowContainer>{SvgComponent(ArrowImgData[width])}</ArrowContainer>
-                <HackathonWrapper>
-                  <Hackathon width={width} />
-                </HackathonWrapper>
-              </EventContainer>
-            </EventBackground>
-          </>
-        )}
+        <ResponsiveBody
+          mobileText={
+            <>
+              {CurriculumChartData.mobile.map((chart, i) => (
+                <Chart key={i}>{SvgComponent(chart)}</Chart>
+              ))}
+              <EventBackground>
+                <MobileArrowContainer>{SvgComponent(ArrowImgData.mobile)}</MobileArrowContainer>
+                <MobileEventContainer>
+                  <EventSection>
+                    <Ideathon />
+                  </EventSection>
+                  <EventSection>
+                    <Hackathon screen="mobile" />
+                  </EventSection>
+                  <EventSection>
+                    <Study />
+                  </EventSection>
+                </MobileEventContainer>
+              </EventBackground>
+            </>
+          }
+          tabletText={
+            <>
+              <Chart>{SvgComponent(CurriculumChartData.tablet)}</Chart>
+              <EventBackground>
+                <EventContainer>
+                  <IdeathonWrapper>
+                    <Ideathon />
+                  </IdeathonWrapper>
+                  <StudyWrapper>
+                    <Study />
+                  </StudyWrapper>
+                  <ArrowContainer>{SvgComponent(ArrowImgData.tablet)}</ArrowContainer>
+                  <HackathonWrapper>
+                    <Hackathon screen="tablet" />
+                  </HackathonWrapper>
+                </EventContainer>
+              </EventBackground>
+            </>
+          }
+          desktopText={
+            <>
+              <Chart>{SvgComponent(CurriculumChartData.desktop)}</Chart>
+              <EventBackground>
+                <EventContainer>
+                  <IdeathonWrapper>
+                    <Ideathon />
+                  </IdeathonWrapper>
+                  <StudyWrapper>
+                    <Study />
+                  </StudyWrapper>
+                  <ArrowContainer>{SvgComponent(ArrowImgData.desktop)}</ArrowContainer>
+                  <HackathonWrapper>
+                    <Hackathon screen="desktop" />
+                  </HackathonWrapper>
+                </EventContainer>
+              </EventBackground>
+            </>
+          }
+        />
       </Container>
     </Background>
   );

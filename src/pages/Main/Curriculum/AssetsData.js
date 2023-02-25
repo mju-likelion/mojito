@@ -9,9 +9,3 @@ export const ArrowImgData = {
   tablet: 'CurriculumLineTablet',
   mobile: 'CurriculumLineMobile',
 };
-
-export const HackathonImageData = {
-  desktop: 'CurriculumPcImage',
-  tablet: 'CurriculmTabletImage',
-  mobile: 'CurriculmTabletImage',
-};
