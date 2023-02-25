@@ -11,8 +11,8 @@ const Main = () => {
       <Banner />
       <About />
       <Curriculum />
-      <Recruit />
       <FootPrint />
+      <Recruit />
       <OfficialApply />
     </>
   );
