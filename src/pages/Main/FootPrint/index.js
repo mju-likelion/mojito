@@ -24,10 +24,9 @@ const FootPrint = () => {
             <ResponsiveBody mobileText={mobileContent} tabletText={tabletContent} desktopText={desktopContent} />
           </IntroductionContentText>
         </FolerTextBox>
-        <ButtonBox>
+        <ButtonBox href="https://github.com/mju-likelion" target="_blank">
           <Button
             text={'프로젝트 구경하러 가기'}
-            handleClick={() => window.open('https://github.com/mju-likelion', '_blank')}
             buttonColor="BLACK"
             pcTextSize="20px"
             tabletTextSize="14px"
@@ -165,7 +164,7 @@ const IntroductionContentText = styled.div`
   }
 `;
 
-const ButtonBox = styled.div`
+const ButtonBox = styled.a`
   margin: 36px 0 0 20px;
   @media ${({ theme }) => theme.devices.TABLET} {
     margin: 30px 0 0 24px;
