@@ -1,9 +1,11 @@
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { ReactComponent as BigLogo } from '../../assets/images/logo_big.svg';
 import { ReactComponent as SmallLogo } from '../../assets/images/logo_small.svg';
-
 const Logo = () => {
+  const navigate = useNavigate();
+
   const scrollToTop = () => {
     const scroll = window.setInterval(() => {
       const pageScrollY = window.scrollY;
@@ -17,6 +19,7 @@ const Logo = () => {
   };
 
   const handleLogoClick = () => {
+    navigate('/');
     scrollToTop();
   };
 

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { ReactComponent as OpenMenuIcon } from '../../assets/images/header_mobile_menu.svg';
@@ -8,9 +9,10 @@ import { ReactComponent as CloseMenuIcon } from '../../assets/images/header_mobi
 import DropDownMenu from './DropDownMenu';
 import Logo from './Logo';
 import { NAVIGATION_LIST } from './NavigationList';
+
 const Header = () => {
   const [isDropDownOpen, setOpenDropDown] = useState(false);
-
+  const navigate = useNavigate();
   const handleMenuIconClick = isClicked => {
     setOpenDropDown(isClicked);
   };
@@ -22,7 +24,9 @@ const Header = () => {
           <Logo />
           <NavigationBox>
             {NAVIGATION_LIST.map(item => (
-              <NavigationItem key={item.id}>{item.name}</NavigationItem>
+              <NavigationItem href={item.ref} key={item.id} onClick={() => navigate(item.path)}>
+                {item.name}
+              </NavigationItem>
             ))}
           </NavigationBox>
           {!isDropDownOpen ? (
@@ -32,7 +36,7 @@ const Header = () => {
           )}
         </HeaderBox>
       </HeaderTopBox>
-      {isDropDownOpen && <DropDownMenu />}
+      {isDropDownOpen && <DropDownMenu setOpenDropDown={setOpenDropDown} />}
     </Wrapper>
   );
 };
@@ -81,8 +85,14 @@ const NavigationBox = styled.div`
   }
 `;
 
+const NavigationItem = styled.a`
+  all: unset;
+  cursor: pointer;
+`;
+
 const DropDownOpenIcon = styled(OpenMenuIcon)`
   margin-left: auto;
+  cursor: pointer;
   @media ${({ theme }) => theme.devices.TABLET} {
     display: none;
   }
@@ -90,14 +100,10 @@ const DropDownOpenIcon = styled(OpenMenuIcon)`
 
 const DropDownCloseIcon = styled(CloseMenuIcon)`
   margin-left: auto;
+  cursor: pointer;
   @media ${({ theme }) => theme.devices.TABLET} {
     display: none;
   }
-`;
-
-const NavigationItem = styled.button`
-  all: unset;
-  cursor: pointer;
 `;
 
 export default Header;

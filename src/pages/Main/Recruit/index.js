@@ -5,6 +5,7 @@ import RecruitContent from './RecruitContent';
 const Recruit = () => {
   return (
     <Container>
+      <a name="recruit" /> {/*헤더 이동 기능위해 추가했습니다*/}
       <div>
         <RecruitContent />
       </div>

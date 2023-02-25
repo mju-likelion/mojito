@@ -13,6 +13,7 @@ const FootPrint = () => {
   const { mobileContent, tabletContent, desktopContent } = FootPrintContent;
   return (
     <>
+      <a name="project" /> {/*헤더 이동 기능위해 추가했습니다*/}
       <FolderTopLine>
         <FolderTopLineSvg />
       </FolderTopLine>
