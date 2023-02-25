@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { ReactComponent as BigLogo } from '../assets/images/logo_big.svg';
-import { ReactComponent as SmallLogo } from '../assets/images/logo_small.svg';
+import { ReactComponent as BigLogo } from '../../assets/images/logo_big.svg';
+import { ReactComponent as SmallLogo } from '../../assets/images/logo_small.svg';
 
 const Logo = () => {
   const scrollToTop = () => {
