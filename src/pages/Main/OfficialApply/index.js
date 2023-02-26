@@ -13,8 +13,8 @@ const OfficialApply = () => {
         <ProposeText>저희와 함께 가실까요?</ProposeText>
       </ContentText>
       <ButtonBox>
-        <Button text={'지원하기'} handleClick={() => window.open('https://beta-apply.mju-likelion.com/', '_blank')} />
-        {/* 이거 나중에 링크 최종본으로 변경 */}
+        <Button text={'지원하기'} handleClick={() => window.open('https://apply.mju-likelion.com/', '_blank')} />
+        {/* 이거 나중에 링크 최종본으로 변경 -> 민쥐가 일단 했습니다 */}
       </ButtonBox>
     </Container>
   );
