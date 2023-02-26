@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-import { ReactComponent as MobileArrow } from '../../../assets/images/CurriculumLineMobile.svg';
-import { ReactComponent as PcArrow } from '../../../assets/images/CurriculumLinePc.svg';
-import { ReactComponent as TabletArrow } from '../../../assets/images/CurriculumLineTablet.svg';
-import { ReactComponent as MobileDesignChart } from '../../../assets/images/CurriculumMobileDesign.svg';
-import { ReactComponent as MobileServerChart } from '../../../assets/images/CurriculumMobileServer.svg';
-import { ReactComponent as MobileWebChart } from '../../../assets/images/CurriculumMobileWeb.svg';
-import { ReactComponent as PcChart } from '../../../assets/images/CurriculumPc.svg';
-import { ReactComponent as TabletChart } from '../../../assets/images/CurriculumTablet.svg';
+import { ReactComponent as MobileArrow } from '../../../assets/images/curriculum_line_mobile.svg';
+import { ReactComponent as PcArrow } from '../../../assets/images/curriculum_line_pc.svg';
+import { ReactComponent as TabletArrow } from '../../../assets/images/curriculum_line_tablet.svg';
+import { ReactComponent as MobileDesignChart } from '../../../assets/images/curriculum_mobile_design.svg';
+import { ReactComponent as MobileServerChart } from '../../../assets/images/curriculum_mobile_server.svg';
+import { ReactComponent as MobileWebChart } from '../../../assets/images/curriculum_mobile_web.svg';
+import { ReactComponent as PcChart } from '../../../assets/images/curriculum_pc.svg';
+import { ReactComponent as TabletChart } from '../../../assets/images/curriculum_tablet.svg';
 import ResponsiveBody from '../../../components/ResponsiveBody';
 
 import Hackathon from './Hackathon';

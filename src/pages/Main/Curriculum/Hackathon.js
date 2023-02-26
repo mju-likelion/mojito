@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-import CurriculumPCHackathon0 from '../../../assets/images/CurriculumPcHackathon0.png';
-import CurriculumPCHackathon1 from '../../../assets/images/CurriculumPcHackathon1.png';
-import CurriculumPCHackathon2 from '../../../assets/images/CurriculumPcHackathon2.png';
-import CurriculumTabletHackathon0 from '../../../assets/images/CurriculumTabletHackathon0.png';
-import CurriculumTabletHackathon1 from '../../../assets/images/CurriculumTabletHackathon1.png';
-import CurriculumTabletHackathon2 from '../../../assets/images/CurriculumTabletHackathon2.png';
+import CurriculumPCHackathon0 from '../../../assets/images/curriculum_pc_hackathon0.png';
+import CurriculumPCHackathon1 from '../../../assets/images/curriculum_pc_hackathon1.png';
+import CurriculumPCHackathon2 from '../../../assets/images/curriculum_pc_hackathon2.png';
+import CurriculumTabletHackathon0 from '../../../assets/images/curriculum_tablet_hackathon0.png';
+import CurriculumTabletHackathon1 from '../../../assets/images/curriculum_tablet_hackathon1.png';
+import CurriculumTabletHackathon2 from '../../../assets/images/curriculum_tablet_hackathon2.png';
 
 import { BlueTitle, DeskTopBreakLine, MobileTabletBreakLine, EventText } from '.';
 
