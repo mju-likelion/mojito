@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-import ArticleImageCard from '../../../../components/ArticleImageCard';
+import ArticleImageCard from './../../../../components/ArticleImageCard';
+import { ABOUT_MJU_LIEKLIONS } from './AboutFileData';
 
 /** @TODO TABLE 버전 UI 추가하기 */
 const AboutMJU = () => {
@@ -10,18 +11,18 @@ const AboutMJU = () => {
       <Hr />
       <Article>
         <PcImages>
-          {FILE_NAME.pc.map((item, idx) => (
-            <ArticleImageCard key={idx} imageName={item} />
+          {ABOUT_MJU_LIEKLIONS.pc.map((item, index) => (
+            <ArticleImageCard key={index} image={item.image} title={item.title} text={item.text} />
           ))}
         </PcImages>
         <TabletImages>
-          {FILE_NAME.tablet.map((item, idx) => (
-            <ArticleImageCard key={idx} imageName={item} />
+          {ABOUT_MJU_LIEKLIONS.tablet.map((item, index) => (
+            <ArticleImageCard key={index} image={item.image} title={item.title} text={item.text} />
           ))}
         </TabletImages>
         <MobileImages>
-          {FILE_NAME.mobile.map((item, idx) => (
-            <ArticleImageCard key={idx} imageName={item} />
+          {ABOUT_MJU_LIEKLIONS.mobile.map((item, index) => (
+            <ArticleImageCard key={index} image={item.image} title={item.title} text={item.text} />
           ))}
         </MobileImages>
       </Article>
@@ -30,11 +31,6 @@ const AboutMJU = () => {
 };
 
 /** @TODO 현재 태블릿, 모바일 버전 svg 컴포넌트 내용이 pc버전 내용임, 버전에 맞게 수정 필요 */
-const FILE_NAME = {
-  pc: ['AboutMju1PC', 'AboutMju2PC', 'AboutMju3PC'],
-  tablet: ['AboutMju1Tablet', 'AboutMju2Tablet', 'AboutMju3Tablet'],
-  mobile: ['AboutMju1Mobile', 'AboutMju2Mobile', 'AboutMju3Mobile'],
-};
 
 const Wrapper = styled.div`
   color: ${({ theme }) => theme.colors.BLUE1};
@@ -72,16 +68,19 @@ const Wrapper = styled.div`
 `;
 
 const Hr = styled.hr`
-  border: 1px solid ${({ theme }) => theme.colors.BLUE1};
+  height: 1px;
+  background-color: ${({ theme }) => theme.colors.BLUE1};
+  border: none;
   margin: 6px auto 20px auto;
   width: 262px;
   @media ${({ theme }) => theme.devices.TABLET} {
+    height: 2px;
     width: 376px;
     margin: 10px auto 20px auto;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
+    height: 2px;
     width: 1200px;
-    border: 2px solid ${({ theme }) => theme.colors.BLUE1};
     margin: 20px auto 30px auto;
   }
 `;
@@ -120,6 +119,7 @@ const TabletImages = styled.div`
 `;
 
 const MobileImages = styled.div`
+  margin: auto;
   @media ${({ theme }) => theme.devices.TABLET} {
     display: none;
   }
