@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
@@ -6,13 +6,25 @@ import styled from 'styled-components';
 import { ReactComponent as OpenMenuIcon } from '../../assets/images/header_mobile_menu.svg';
 import { ReactComponent as CloseMenuIcon } from '../../assets/images/header_mobile_x.svg';
 
+import useWindowReszie from './../../hooks/useWindowResize';
 import DropDownMenu from './DropDownMenu';
 import Logo from './Logo';
 import { NAVIGATION_LIST } from './NavigationList';
 
 const Header = () => {
   const [isDropDownOpen, setOpenDropDown] = useState(false);
+
   const navigate = useNavigate();
+
+  const [windowSize] = useWindowReszie();
+  const { width } = windowSize;
+
+  useEffect(() => {
+    if (isDropDownOpen && width >= 600) {
+      setOpenDropDown(false);
+    }
+  }, [width]);
+
   return (
     <Wrapper>
       <HeaderTopBox>
