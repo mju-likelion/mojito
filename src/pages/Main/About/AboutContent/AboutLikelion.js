@@ -25,9 +25,8 @@ const AboutLikelion = () => {
 
 const Wrapper = styled.div`
   width: 278px;
-  margin: 0 auto;
   @media ${({ theme }) => theme.devices.TABLET} {
-    width: 520px;
+    width: 568px;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
     width: 1200px;
