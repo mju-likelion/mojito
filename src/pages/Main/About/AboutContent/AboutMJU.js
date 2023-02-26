@@ -29,6 +29,7 @@ const AboutMJU = () => {
   );
 };
 
+/** @TODO 현재 태블릿, 모바일 버전 svg 컴포넌트 내용이 pc버전 내용임, 버전에 맞게 수정 필요 */
 const FILE_NAME = {
   pc: ['AboutMju1PC', 'AboutMju2PC', 'AboutMju3PC'],
   tablet: ['AboutMju1Tablet', 'AboutMju2Tablet', 'AboutMju3Tablet'],
@@ -71,9 +72,7 @@ const Wrapper = styled.div`
 `;
 
 const Hr = styled.hr`
-  border: none;
-  height: 1px;
-  background-color: ${({ theme }) => theme.colors.BLUE1};
+  border: 1px solid ${({ theme }) => theme.colors.BLUE1};
   margin: 6px auto 20px auto;
   width: 262px;
   @media ${({ theme }) => theme.devices.TABLET} {
