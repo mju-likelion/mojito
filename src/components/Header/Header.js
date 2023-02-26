@@ -13,10 +13,6 @@ import { NAVIGATION_LIST } from './NavigationList';
 const Header = () => {
   const [isDropDownOpen, setOpenDropDown] = useState(false);
   const navigate = useNavigate();
-  const handleMenuIconClick = isClicked => {
-    setOpenDropDown(isClicked);
-  };
-
   return (
     <Wrapper>
       <HeaderTopBox>
@@ -31,9 +27,9 @@ const Header = () => {
             ))}
           </NavigationBox>
           {!isDropDownOpen ? (
-            <DropDownOpenIcon onClick={() => handleMenuIconClick(true)} />
+            <DropDownOpenIcon onClick={() => setOpenDropDown(true)} />
           ) : (
-            <DropDownCloseIcon onClick={() => handleMenuIconClick(false)} />
+            <DropDownCloseIcon onClick={() => setOpenDropDown(false)} />
           )}
         </HeaderBox>
       </HeaderTopBox>
