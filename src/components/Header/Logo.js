@@ -7,7 +7,7 @@ const Logo = ({ setOpenDropDown }) => {
   const navigate = useNavigate();
 
   const handleLogoClick = () => {
-    window.scrollY !== 0 && setOpenDropDown(false);
+    setOpenDropDown(false);
     navigate('/');
     window.scrollTo(0, 0);
   };
