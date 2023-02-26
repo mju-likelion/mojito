@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import CurriculumPCHackathon0 from '../../../assets/images/CurriculumPCHackathon0.png';
-import CurriculumPCHackathon1 from '../../../assets/images/CurriculumPCHackathon1.png';
-import CurriculumPCHackathon2 from '../../../assets/images/CurriculumPCHackathon2.png';
+import CurriculumPCHackathon0 from '../../../assets/images/CurriculumPcHackathon0.png';
+import CurriculumPCHackathon1 from '../../../assets/images/CurriculumPcHackathon1.png';
+import CurriculumPCHackathon2 from '../../../assets/images/CurriculumPcHackathon2.png';
 import CurriculumTabletHackathon0 from '../../../assets/images/CurriculumTabletHackathon0.png';
 import CurriculumTabletHackathon1 from '../../../assets/images/CurriculumTabletHackathon1.png';
 import CurriculumTabletHackathon2 from '../../../assets/images/CurriculumTabletHackathon2.png';
@@ -34,9 +34,9 @@ const Hackathon = ({ screen }) => {
       {screen === 'desktop' ? (
         <>
           <HackathonImageWrapper>
-            <Image image={CurriculumPCHackathon0} />
-            <Image image={CurriculumPCHackathon1} />
-            <Image image={CurriculumPCHackathon2} />
+            <Image src={CurriculumPCHackathon0} alt="hackathonImage0" />
+            <Image src={CurriculumPCHackathon1} alt="hackathonImage1" />
+            <Image src={CurriculumPCHackathon2} alt="hackathonImage2" />
             <GradientBox>
               <div />
               <div />
@@ -46,9 +46,9 @@ const Hackathon = ({ screen }) => {
       ) : (
         <>
           <HackathonImageWrapper>
-            <Image image={CurriculumTabletHackathon0} />
-            <Image image={CurriculumTabletHackathon1} />
-            <Image image={CurriculumTabletHackathon2} />
+            <Image src={CurriculumTabletHackathon0} alt="hackathonImage0" />
+            <Image src={CurriculumTabletHackathon1} alt="hackathonImage1" />
+            <Image src={CurriculumTabletHackathon2} alt="hackathonImage2" />
             <GradientBox>
               <div />
               <div />
@@ -63,11 +63,9 @@ const Hackathon = ({ screen }) => {
 export default Hackathon;
 
 const HackathonImageWrapper = styled.div`
-  box-sizing: border-box;
   margin-top: 20px;
   position: relative;
   display: flex;
-  justify-content: space-around;
   width: 264px;
   height: 59px;
   @media ${({ theme }) => theme.devices.DESKTOP} {
@@ -77,13 +75,25 @@ const HackathonImageWrapper = styled.div`
   }
 `;
 
-const Image = styled.div`
-  background-image: url(${({ image }) => image});
-  width: 33%;
+const Image = styled.img`
+  width: 85.31px;
   height: 100%;
   border-radius: 4px;
+  margin-right: 3.79px;
+
+  :nth-child(2) {
+    width: 85.79px;
+  }
+
+  :last-child {
+    margin-right: 0;
+  }
 
   @media ${({ theme }) => theme.devices.DESKTOP} {
+    width: 180px;
+    :nth-child(2) {
+      width: 180px;
+    }
     margin-right: 8px;
     border-radius: 8px;
   }
@@ -97,7 +107,7 @@ const GradientBox = styled.div`
   justify-content: space-between;
 
   div {
-    width: 33%;
+    width: 85.31px;
     border-radius: 4px;
     :first-child {
       background: linear-gradient(-90deg, transparent 0, #272727 100%);
@@ -110,6 +120,7 @@ const GradientBox = styled.div`
   @media ${({ theme }) => theme.devices.DESKTOP} {
     div {
       border-radius: 8px;
+      width: 180px;
     }
   }
 `;

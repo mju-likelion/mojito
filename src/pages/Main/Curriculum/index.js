@@ -1,9 +1,15 @@
 import styled from 'styled-components';
 
+import { ReactComponent as MobileArrow } from '../../../assets/images/CurriculumLineMobile.svg';
+import { ReactComponent as PcArrow } from '../../../assets/images/CurriculumLinePc.svg';
+import { ReactComponent as TabletArrow } from '../../../assets/images/CurriculumLineTablet.svg';
+import { ReactComponent as MobileDesignChart } from '../../../assets/images/CurriculumMobileDesign.svg';
+import { ReactComponent as MobileServerChart } from '../../../assets/images/CurriculumMobileServer.svg';
+import { ReactComponent as MobileWebChart } from '../../../assets/images/CurriculumMobileWeb.svg';
+import { ReactComponent as PcChart } from '../../../assets/images/CurriculumPc.svg';
+import { ReactComponent as TabletChart } from '../../../assets/images/CurriculumTablet.svg';
 import ResponsiveBody from '../../../components/ResponsiveBody';
-import SvgComponent from '../../../components/SvgComponent';
 
-import { CurriculumChartData, ArrowImgData } from './AssetsData';
 import Hackathon from './Hackathon';
 import Ideathon from './Ideathon';
 import Study from './Study';
@@ -25,11 +31,19 @@ const Curriculum = () => {
         <ResponsiveBody
           mobileText={
             <>
-              {CurriculumChartData.mobile.map((chart, i) => (
-                <Chart key={i}>{SvgComponent(chart)}</Chart>
-              ))}
+              <Chart>
+                <MobileWebChart />
+              </Chart>
+              <Chart>
+                <MobileServerChart />
+              </Chart>
+              <Chart>
+                <MobileDesignChart />
+              </Chart>
               <EventBackground>
-                <MobileArrowContainer>{SvgComponent(ArrowImgData.mobile)}</MobileArrowContainer>
+                <MobileArrowContainer>
+                  <MobileArrow />
+                </MobileArrowContainer>
                 <MobileEventContainer>
                   <EventSection>
                     <Ideathon />
@@ -46,7 +60,9 @@ const Curriculum = () => {
           }
           tabletText={
             <>
-              <Chart>{SvgComponent(CurriculumChartData.tablet)}</Chart>
+              <Chart>
+                <TabletChart />
+              </Chart>
               <EventBackground>
                 <EventContainer>
                   <IdeathonWrapper>
@@ -55,7 +71,9 @@ const Curriculum = () => {
                   <StudyWrapper>
                     <Study />
                   </StudyWrapper>
-                  <ArrowContainer>{SvgComponent(ArrowImgData.tablet)}</ArrowContainer>
+                  <ArrowContainer>
+                    <TabletArrow />
+                  </ArrowContainer>
                   <HackathonWrapper>
                     <Hackathon screen="tablet" />
                   </HackathonWrapper>
@@ -65,7 +83,9 @@ const Curriculum = () => {
           }
           desktopText={
             <>
-              <Chart>{SvgComponent(CurriculumChartData.desktop)}</Chart>
+              <Chart>
+                <PcChart />
+              </Chart>
               <EventBackground>
                 <EventContainer>
                   <IdeathonWrapper>
@@ -74,7 +94,9 @@ const Curriculum = () => {
                   <StudyWrapper>
                     <Study />
                   </StudyWrapper>
-                  <ArrowContainer>{SvgComponent(ArrowImgData.desktop)}</ArrowContainer>
+                  <ArrowContainer>
+                    <PcArrow />
+                  </ArrowContainer>
                   <HackathonWrapper>
                     <Hackathon screen="desktop" />
                   </HackathonWrapper>
