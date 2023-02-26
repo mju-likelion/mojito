@@ -26,7 +26,6 @@ const Wrapper = styled.div`
   width: 276px;
   height: 252px;
   @media ${({ theme }) => theme.devices.TABLET} {
-    width: 268px;
     height: 252px;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {

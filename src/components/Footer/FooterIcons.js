@@ -9,9 +9,9 @@ import { ReactComponent as MediIconSvg } from '../../assets/images/icon_medi.svg
 
 import { SOCIAL_LINKS } from './SocialLinks';
 
-const FooterIcons = () => {
+const FooterIcons = ({ handleCopyEmail, setIsCopySuccess }) => {
   return (
-    <>
+    <IconsBox>
       <AnchorIcon href={SOCIAL_LINKS['instagram']} target="_blank" rel="noopener noreferrer">
         <InstaIcon />
       </AnchorIcon>
@@ -24,12 +24,26 @@ const FooterIcons = () => {
       <AnchorIcon href={SOCIAL_LINKS['medium']} target="_blank" rel="noopener noreferrer">
         <MediIcon />
       </AnchorIcon>
-      <CopyToClipboard text={SOCIAL_LINKS['email']}>
-        <MailIcon />
+      <CopyToClipboard
+        text={SOCIAL_LINKS['email']}
+        onCopy={text => (text === SOCIAL_LINKS['email'] ? setIsCopySuccess(true) : setIsCopySuccess(false))}
+      >
+        <MailIcon onClick={handleCopyEmail} />
       </CopyToClipboard>
-    </>
+    </IconsBox>
   );
 };
+
+const IconsBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 264px;
+  height: 40px;
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    width: 440px;
+    height: 56px;
+  }
+`;
 
 const AnchorIcon = styled.a`
   cursor: pointer;

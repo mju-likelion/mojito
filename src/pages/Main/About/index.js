@@ -9,8 +9,10 @@ const About = () => {
     <>
       <a name="about" /> {/* 헤더 이동 기능위해 추가했습니다 */}
       <Wrapper>
-        <AboutLikelion />
-        <AboutMJU />
+        <div>
+          <AboutLikelion />
+          <AboutMJU />
+        </div>
         <ButtonWrapper>
           <Button
             text={'지원하기'}
@@ -23,6 +25,10 @@ const About = () => {
 };
 
 const Wrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 80px auto;
   @media ${({ theme }) => theme.devices.TABLET} {
     margin: 100px auto 85px auto;
