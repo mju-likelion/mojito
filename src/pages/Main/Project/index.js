@@ -85,16 +85,18 @@ const FolderTopLine = styled.div`
   background-color: ${({ theme }) => theme.colors.BLACK};
   width: 318px;
   height: 14px;
-  margin: 60px auto -1px;
+  margin: 4px auto -1px;
+  padding-top: 56px;
   @media ${({ theme }) => theme.devices.TABLET} {
     width: 580px;
     height: 21px;
-    margin: 100px auto -1px;
+    margin: 30px auto -1px;
+    padding-top: 70px;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
     width: 1200px;
     height: 42px;
-    margin: 160px auto -1px; //이거 일단 구분선 때문에 해놓긴했는데..
+    margin: 90px auto -1px; //이거 일단 구분선 때문에 해놓긴했는데..
   }
 `;
 

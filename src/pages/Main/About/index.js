@@ -26,12 +26,12 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 80px auto;
+  margin: 26px auto 80px;
   @media ${({ theme }) => theme.devices.TABLET} {
-    margin: 100px auto 85px auto;
+    margin: 30px auto 85px auto;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
-    margin: 160px auto;
+    margin: 90px auto;
   }
 `;
 
