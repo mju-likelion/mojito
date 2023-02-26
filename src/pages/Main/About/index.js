@@ -7,7 +7,6 @@ import { AboutLikelion, AboutMJU } from './AboutContent';
 const About = () => {
   return (
     <Wrapper>
-      <a name="about" /> {/*헤더 이동 기능위해 추가했습니다*/}
       <AboutLikelion />
       <AboutMJU />
       <ButtonWrapper>
