@@ -68,16 +68,19 @@ const Wrapper = styled.div`
 `;
 
 const Hr = styled.hr`
-  border: 1px solid ${({ theme }) => theme.colors.BLUE1};
+  height: 1px;
+  background-color: ${({ theme }) => theme.colors.BLUE1};
+  border: none;
   margin: 6px auto 20px auto;
   width: 262px;
   @media ${({ theme }) => theme.devices.TABLET} {
+    height: 2px;
     width: 376px;
     margin: 10px auto 20px auto;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
+    height: 2px;
     width: 1200px;
-    border: 2px solid ${({ theme }) => theme.colors.BLUE1};
     margin: 20px auto 30px auto;
   }
 `;
