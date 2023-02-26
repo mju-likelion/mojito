@@ -1,15 +1,26 @@
+import { useState } from 'react';
+
 import styled from 'styled-components';
 
 import { ReactComponent as ArrowIcon } from '../../assets/images/icon_footer_arrow.svg';
 
+import Toast from './../Toast';
 import FooterIcons from './FooterIcons';
 
 const Footer = () => {
+  const [toast, setToast] = useState(false);
+  const [isCopySuccess, setIsCopySuccess] = useState(false);
+
   return (
     <FooterBox>
-      <IconsBox>
-        <FooterIcons />
-      </IconsBox>
+      <FooterIcons handleCopyEmail={() => setToast(true)} setIsCopySuccess={setIsCopySuccess} />
+      {toast && (
+        <Toast
+          setToast={setToast}
+          isSuccess={isCopySuccess}
+          text={isCopySuccess ? '메일 주소가 복사되었습니다' : '메일 주소 복사에 실패하였습니다'}
+        />
+      )}
       <RouteApplyBox href={'https://apply.mju-likelion.com/'} target="_blank" rel="noopener noreferrer">
         <RouteApplyBtn>멋쟁이사자처럼 명지대(자연) 11기 APPLY</RouteApplyBtn>
         <ArrowIcon />
@@ -36,17 +47,6 @@ const FooterBox = styled.div`
   @media ${({ theme }) => theme.devices.DESKTOP} {
     height: 232px;
     padding-bottom: 40px;
-  }
-`;
-
-const IconsBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 264px;
-  height: 40px;
-  @media ${({ theme }) => theme.devices.DESKTOP} {
-    width: 440px;
-    height: 56px;
   }
 `;
 
