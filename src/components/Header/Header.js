@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { ReactComponent as OpenMenuIcon } from '../../assets/images/header_mobile_menu.svg';
 import { ReactComponent as CloseMenuIcon } from '../../assets/images/header_mobile_x.svg';
 
-import useWindowReszie from './../../hooks/useWindowResize';
+import useWindowResize from './../../hooks/useWindowResize';
 import DropDownMenu from './DropDownMenu';
 import Logo from './Logo';
 import { NAVIGATION_LIST } from './NavigationList';
@@ -16,7 +16,7 @@ const Header = () => {
 
   const navigate = useNavigate();
 
-  const [windowSize] = useWindowReszie();
+  const [windowSize] = useWindowResize();
   const { width } = windowSize;
 
   useEffect(() => {
