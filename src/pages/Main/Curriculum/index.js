@@ -16,97 +16,100 @@ import Study from './Study';
 
 const Curriculum = () => {
   return (
-    <Background>
-      <Container>
-        <RoadmapText>ROADMAP</RoadmapText>
-        <PartCurriculumTitle>파트 및 커리큘럼</PartCurriculumTitle>
-        <PartCurriculumText>
-          멋쟁이사자처럼 명지대(자연) 11기에서는 <MobileBreakLine />
-          웹, 서버, 기획/디자인 파트로 나누어 진행됩니다. <MobileBreakLine />
-          <DesktopTabletBreakLine />각 파트별로 회원들의 실력 향상과 프로젝트 아웃풋을 <MobileBreakLine />
-          위한 각 파트별 커리큘럼이 운영되며, <DesktopTabletBreakLine />
-          다른 파트와의 <MobileBreakLine />
-          크로스오버로 협업을 위한 과정을 배워갑니다.
-        </PartCurriculumText>
-        <ResponsiveBody
-          mobileText={
-            <>
-              <Chart>
-                <MobileWebChart />
-              </Chart>
-              <Chart>
-                <MobileServerChart />
-              </Chart>
-              <Chart>
-                <MobileDesignChart />
-              </Chart>
-              <EventBackground>
-                <MobileArrowContainer>
-                  <MobileArrow />
-                </MobileArrowContainer>
-                <MobileEventContainer>
-                  <EventSection>
-                    <Ideathon />
-                  </EventSection>
-                  <EventSection>
-                    <Hackathon screen="mobile" />
-                  </EventSection>
-                  <EventSection>
-                    <Study />
-                  </EventSection>
-                </MobileEventContainer>
-              </EventBackground>
-            </>
-          }
-          tabletText={
-            <>
-              <Chart>
-                <TabletChart />
-              </Chart>
-              <EventBackground>
-                <EventContainer>
-                  <IdeathonWrapper>
-                    <Ideathon />
-                  </IdeathonWrapper>
-                  <StudyWrapper>
-                    <Study />
-                  </StudyWrapper>
-                  <ArrowContainer>
-                    <TabletArrow />
-                  </ArrowContainer>
-                  <HackathonWrapper>
-                    <Hackathon screen="tablet" />
-                  </HackathonWrapper>
-                </EventContainer>
-              </EventBackground>
-            </>
-          }
-          desktopText={
-            <>
-              <Chart>
-                <PcChart />
-              </Chart>
-              <EventBackground>
-                <EventContainer>
-                  <IdeathonWrapper>
-                    <Ideathon />
-                  </IdeathonWrapper>
-                  <StudyWrapper>
-                    <Study />
-                  </StudyWrapper>
-                  <ArrowContainer>
-                    <PcArrow />
-                  </ArrowContainer>
-                  <HackathonWrapper>
-                    <Hackathon screen="desktop" />
-                  </HackathonWrapper>
-                </EventContainer>
-              </EventBackground>
-            </>
-          }
-        />
-      </Container>
-    </Background>
+    <>
+      <a name="roadmap" /> {/* 헤더 이동 기능위해 추가했습니다 */}
+      <Background>
+        <Container>
+          <RoadmapText>ROADMAP</RoadmapText>
+          <PartCurriculumTitle>파트 및 커리큘럼</PartCurriculumTitle>
+          <PartCurriculumText>
+            멋쟁이사자처럼 명지대(자연) 11기에서는 <MobileBreakLine />
+            웹, 서버, 기획/디자인 파트로 나누어 진행됩니다. <MobileBreakLine />
+            <DesktopTabletBreakLine />각 파트별로 회원들의 실력 향상과 프로젝트 아웃풋을 <MobileBreakLine />
+            위한 각 파트별 커리큘럼이 운영되며, <DesktopTabletBreakLine />
+            다른 파트와의 <MobileBreakLine />
+            크로스오버로 협업을 위한 과정을 배워갑니다.
+          </PartCurriculumText>
+          <ResponsiveBody
+            mobileText={
+              <>
+                <Chart>
+                  <MobileWebChart />
+                </Chart>
+                <Chart>
+                  <MobileServerChart />
+                </Chart>
+                <Chart>
+                  <MobileDesignChart />
+                </Chart>
+                <EventBackground>
+                  <MobileArrowContainer>
+                    <MobileArrow />
+                  </MobileArrowContainer>
+                  <MobileEventContainer>
+                    <EventSection>
+                      <Ideathon />
+                    </EventSection>
+                    <EventSection>
+                      <Hackathon screen="mobile" />
+                    </EventSection>
+                    <EventSection>
+                      <Study />
+                    </EventSection>
+                  </MobileEventContainer>
+                </EventBackground>
+              </>
+            }
+            tabletText={
+              <>
+                <Chart>
+                  <TabletChart />
+                </Chart>
+                <EventBackground>
+                  <EventContainer>
+                    <IdeathonWrapper>
+                      <Ideathon />
+                    </IdeathonWrapper>
+                    <StudyWrapper>
+                      <Study />
+                    </StudyWrapper>
+                    <ArrowContainer>
+                      <TabletArrow />
+                    </ArrowContainer>
+                    <HackathonWrapper>
+                      <Hackathon screen="tablet" />
+                    </HackathonWrapper>
+                  </EventContainer>
+                </EventBackground>
+              </>
+            }
+            desktopText={
+              <>
+                <Chart>
+                  <PcChart />
+                </Chart>
+                <EventBackground>
+                  <EventContainer>
+                    <IdeathonWrapper>
+                      <Ideathon />
+                    </IdeathonWrapper>
+                    <StudyWrapper>
+                      <Study />
+                    </StudyWrapper>
+                    <ArrowContainer>
+                      <PcArrow />
+                    </ArrowContainer>
+                    <HackathonWrapper>
+                      <Hackathon screen="desktop" />
+                    </HackathonWrapper>
+                  </EventContainer>
+                </EventBackground>
+              </>
+            }
+          />
+        </Container>
+      </Background>
+    </>
   );
 };
 

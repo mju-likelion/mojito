@@ -6,16 +6,19 @@ import { AboutLikelion, AboutMJU } from './AboutContent';
 
 const About = () => {
   return (
-    <Wrapper>
-      <AboutLikelion />
-      <AboutMJU />
-      <ButtonWrapper>
-        <Button
-          text={'지원하기'}
-          handleClick={null /*() => window.open('https://mjulikelion-apply.netlify.app/', '_blank')*/}
-        />
-      </ButtonWrapper>
-    </Wrapper>
+    <>
+      <a name="about" /> {/* 헤더 이동 기능위해 추가했습니다 */}
+      <Wrapper>
+        <AboutLikelion />
+        <AboutMJU />
+        <ButtonWrapper>
+          <Button
+            text={'지원하기'}
+            handleClick={null /*() => window.open('https://mjulikelion-apply.netlify.app/', '_blank')*/}
+          />
+        </ButtonWrapper>
+      </Wrapper>
+    </>
   );
 };
 

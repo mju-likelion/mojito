@@ -4,11 +4,14 @@ import RecruitContent from './RecruitContent';
 
 const Recruit = () => {
   return (
-    <Container>
-      <div>
-        <RecruitContent />
-      </div>
-    </Container>
+    <>
+      <a name="recruit" />
+      <Container>
+        <div>
+          <RecruitContent />
+        </div>
+      </Container>
+    </>
   );
 };
 
