@@ -166,7 +166,7 @@ export const EventText = styled.div`
 const Background = styled.div`
   box-sizing: border-box;
   background-color: ${({ theme }) => theme.colors.GRAY1};
-  width: 100vw;
+  width: 100%;
   height: 2936px;
   padding: 80px 0;
   @media ${({ theme }) => theme.devices.TABLET} {
