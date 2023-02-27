@@ -50,17 +50,17 @@ const ReadyBlock = styled.div`
 `;
 
 const NetworkingBody = styled.div`
-  height: 320px;
+  //이거 34씩 다 빼야됨
+  height: 286px;
   width: 318px;
   border-radius: 0 0 12px 12px;
   background-color: #303030;
   text-align: center;
   @media ${({ theme }) => theme.devices.TABLET} {
-    height: 320px;
     width: 568px;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
-    height: 500px;
+    height: 466px;
     width: 1200px;
   }
 `;
