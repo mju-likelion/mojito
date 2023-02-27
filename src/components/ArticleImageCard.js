@@ -42,7 +42,13 @@ const ArticleImageCardBlock = styled.div`
 `;
 
 const ArticleImage = styled.img`
+  width: 262px;
+  height: 162px;
   margin-bottom: 16px;
+  @media ${({ theme }) => theme.devices.TABLET} {
+    width: 376px;
+    height: 232px;
+  }
   @media ${({ theme }) => theme.devices.DESKTOP} {
     margin-bottom: 20px;
   }

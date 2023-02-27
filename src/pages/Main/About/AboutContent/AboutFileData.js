@@ -1,61 +1,65 @@
-import AboutMju1Mobile from '../../../../assets/images/About/AboutMju1Mobile.png';
-import AboutMju1PC from '../../../../assets/images/About/AboutMju1PC.png';
-import AboutMju1Tablet from '../../../../assets/images/About/AboutMju1Tablet.png';
-import AboutMju2Mobile from '../../../../assets/images/About/AboutMju2Mobile.png';
-import AboutMju2PC from '../../../../assets/images/About/AboutMju2PC.png';
-import AboutMju2Tablet from '../../../../assets/images/About/AboutMju2Tablet.png';
-import AboutMju3Mobile from '../../../../assets/images/About/AboutMju3Mobile.png';
-import AboutMju3PC from '../../../../assets/images/About/AboutMju3PC.png';
-import AboutMju3Tablet from '../../../../assets/images/About/AboutMju3Tablet.png';
+// import AboutMju1Mobile from '../../../../assets/images/About/AboutMju1Mobile.png';
+// import AboutMju1PC from '../../../../assets/images/About/AboutMju1PC.png';
+// import AboutMju1Tablet from '../../../../assets/images/About/AboutMju1Tablet.png';
+// import AboutMju2Mobile from '../../../../assets/images/About/AboutMju2Mobile.png';
+// import AboutMju2PC from '../../../../assets/images/About/AboutMju2PC.png';
+// import AboutMju2Tablet from '../../../../assets/images/About/AboutMju2Tablet.png';
+// import AboutMju3Mobile from '../../../../assets/images/About/AboutMju3Mobile.png';
+// import AboutMju3PC from '../../../../assets/images/About/AboutMju3PC.png';
+// import AboutMju3Tablet from '../../../../assets/images/About/AboutMju3Tablet.png';
+// import AboutMju1Mobile from '../../../../assets/images/About/AboutMju1Mobile.png';
+import AboutMju1 from '../../../../assets/images/About/AboutMju1.png';
+import AboutMju2 from '../../../../assets/images/About/AboutMju2.png';
+import AboutMju3 from '../../../../assets/images/About/AboutMju3.png';
 
 export const ABOUT_MJU_LIEKLIONS = {
   pc: [
     {
-      image: AboutMju1PC,
+      image: AboutMju1,
       title: '',
       text: '멋쟁이사자처럼 명지대(자연)은\n2019년부터 시작되어 현재까지 5년간\n많은 학우들과 웹 개발을 함께 해오고 있습니다.',
     },
     {
-      image: AboutMju2PC,
+      image: AboutMju2,
       title: '',
       text: '웹 서비스 제작을 위한 프로그래밍 언어부터 다양한\n프레임워크까지 직접 사용해보고 공부할 뿐만 아니라\n파트별 커리큘럼을 통해 지식이 실제 서비스로 연결될 수\n있도록 탄탄한 스터디 로드맵을 구축하고 있습니다.',
     },
     {
-      image: AboutMju3PC,
+      image: AboutMju3,
       title: '',
       text: '열정 가득한 운영진, 페이스메이커가 되어줄\n11기 회원들과 함께 1년간 웹 개발의 세상 속에서\n달릴 준비가 되었다면 지금 바로\n멋쟁이사자처럼 명지대 (자연)에 지원하세요.',
     },
   ],
   tablet: [
     {
-      image: AboutMju1Tablet,
+      image: AboutMju1,
       title: '',
       text: '멋쟁이사자처럼 명지대(자연)은\n2019년부터 시작되어 현재까지 5년간\n많은 학우들과 웹 개발을 함께 해오고 있습니다.',
     },
     {
-      image: AboutMju2Tablet,
+      image: AboutMju2,
       title: '',
       text: '웹 서비스 제작을 위한 프로그래밍 언어부터\n다양한 프레임워크까지 직접 사용해보고 공부할 뿐만 아니라\n파트별 커리큘럼을 통해 지식이 실제 서비스로 연결될 수 있도록\n탄탄한 스터디 로드맵을 구축하고 있습니다.',
     },
     {
-      image: AboutMju3Tablet,
+      image: AboutMju3,
       title: '',
       text: '열정 가득한 운영진, 페이스메이커가 되어줄 11기 회원들과\n함께 1년간 웹 개발의 세상 속에서 달릴 준비가 되었다면\n지금 바로 멋쟁이사자처럼 명지대 (자연)에 지원하세요.',
     },
   ],
   mobile: [
     {
-      image: AboutMju1Mobile,
+      image: AboutMju1,
       title: '',
       text: '멋쟁이사자처럼 명지대(자연)은\n 2019년부터 시작되어 현재까지 5년간 많은\n학우들과 웹 개발을 함께 해오고 있습니다.',
     },
     {
-      image: AboutMju2Mobile,
+      image: AboutMju2,
       title: '',
       text: '웹 서비스 제작을 위한 프로그래밍 언어부터 다양한\n프레임워크까지 직접 사용해보고 공부할 뿐만 아니라 파트별\n커리큘럼을 통해 지식이 실제 서비스로 연결될 수 있도록\n탄탄한 스터디 로드맵을 구축하고 있습니다.',
     },
     {
-      image: AboutMju3Mobile,
+      image: AboutMju3,
       title: '',
       text: '열정 가득한 운영진, 페이스메이커가 되어줄 11기 회원들과\n함께 1년간 웹 개발의 세상 속에서 달릴 준비가 되었다면\n지금 바로 멋쟁이사자처럼 명지대 (자연)에 지원하세요.',
     },
