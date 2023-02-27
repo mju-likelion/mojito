@@ -11,11 +11,13 @@ import ResponsiveBody from '../../components/ResponsiveBody';
 const Ready = () => {
   return (
     <ReadyBlock>
-      <ResponsiveBody
-        mobileContent={<NetworkingMobile />}
-        tabletContent={<NetworkingTablet />}
-        desktopContent={<NetworkingPc />}
-      ></ResponsiveBody>
+      <ResponsiveBox>
+        <ResponsiveBody
+          mobileContent={<NetworkingMobile />}
+          tabletContent={<NetworkingTablet />}
+          desktopContent={<NetworkingPc />}
+        ></ResponsiveBody>
+      </ResponsiveBox>
       <NetworkingBody>
         <Title>NETWORKING</Title>
         <WrapContent>
@@ -34,6 +36,15 @@ const Ready = () => {
     </ReadyBlock>
   );
 };
+const ResponsiveBox = styled.div`
+  //이건 디자인 마진 의도 확인하고
+  // margin-top: 102px;
+  @media ${({ theme }) => theme.devices.TABLET} {
+    // margin-top: 200px;
+  }
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+  }
+`;
 
 const ReadyBlock = styled.div`
   display: flex;
@@ -50,14 +61,16 @@ const ReadyBlock = styled.div`
 `;
 
 const NetworkingBody = styled.div`
-  //이거 34씩 다 빼야됨
   height: 286px;
   width: 318px;
   border-radius: 0 0 12px 12px;
   background-color: #303030;
   text-align: center;
+  //margin-bottom: 29px; //채널톡 영역 어떻게 되는건지?
+  //이것도 디자인 마진 의도 확인하고
   @media ${({ theme }) => theme.devices.TABLET} {
     width: 568px;
+    //  margin-bottom: 185px;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
     height: 466px;
@@ -72,8 +85,7 @@ const Title = styled.div`
   line-height: 13px;
   font-size: 10px;
   margin-top: 42px;
-  @media ${({ theme }) => theme.devices.TABLET} {
-    margin-top: 60px;
+  @media ${({ theme }) => theme.devices.DESKTOP} {
     font-size: 16px;
     line-height: 20px;
   }
@@ -90,12 +102,8 @@ const WrapContent = styled.div`
 `;
 
 const Caution = styled(CautionIcon)`
-  height: 30px;
-  line-height: 30px;
-  @media ${({ theme }) => theme.devices.TABLET} {
-    line-height: 34px;
-    height: 34px;
-  }
+  width: 28px;
+  height: 34px;
   @media ${({ theme }) => theme.devices.DESKTOP} {
     line-height: 56px;
     height: 56px;
@@ -107,11 +115,11 @@ const Content = styled.div`
   font-weight: 700;
   font-size: 22px;
   line-height: 30px;
-  padding: 0 18px;
+  margin: 0 18px;
   @media ${({ theme }) => theme.devices.TABLET} {
     font-size: 26px;
     line-height: 34px;
-    padding: 0 26px;
+    margin: 0 27px;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
     font-size: 40px;
