@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-import { ReactComponent as CautionIcon } from '../../assets/images/caution_illust.svg';
-import { ReactComponent as LionSmall } from '../../assets/images/lion_construct_mobile.svg';
-import { ReactComponent as LionBig } from '../../assets/images/lion_construct_pc.svg';
-import { ReactComponent as NetworkingMobile } from '../../assets/images/networking_mobile.svg';
-import { ReactComponent as NetworkingPc } from '../../assets/images/networking_pc.svg';
-import { ReactComponent as NetworkingTablet } from '../../assets/images/networking_tablet.svg';
+import { ReactComponent as CautionIcon } from '../../assets/images/Networking/caution_illust.svg';
+import { ReactComponent as LionSmall } from '../../assets/images/Networking/lion_construct_mobile.svg';
+import { ReactComponent as LionBig } from '../../assets/images/Networking/lion_construct_pc.svg';
+import { ReactComponent as NetworkingMobile } from '../../assets/images/Networking/networking_mobile.svg';
+import { ReactComponent as NetworkingPc } from '../../assets/images/Networking/networking_pc.svg';
+import { ReactComponent as NetworkingTablet } from '../../assets/images/Networking/networking_tablet.svg';
 import ResponsiveBody from '../../components/ResponsiveBody';
 
 const Ready = () => {
