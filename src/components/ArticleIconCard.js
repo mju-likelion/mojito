@@ -36,10 +36,22 @@ const Wrapper = styled.div`
   width: 276px;
   @media ${({ theme }) => theme.devices.TABLET} {
     height: 252px;
+    :nth-child(2) {
+      margin: 0;
+    }
+    :nth-child(4) {
+      margin-top: 0;
+    }
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
     width: 278px;
     height: 268px;
+    :nth-child(2) {
+      margin: 0;
+    }
+    :nth-child(4) {
+      margin-top: 0;
+    }
   }
 `;
 

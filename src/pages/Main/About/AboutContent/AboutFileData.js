@@ -1,13 +1,3 @@
-// import AboutMju1Mobile from '../../../../assets/images/About/AboutMju1Mobile.png';
-// import AboutMju1PC from '../../../../assets/images/About/AboutMju1PC.png';
-// import AboutMju1Tablet from '../../../../assets/images/About/AboutMju1Tablet.png';
-// import AboutMju2Mobile from '../../../../assets/images/About/AboutMju2Mobile.png';
-// import AboutMju2PC from '../../../../assets/images/About/AboutMju2PC.png';
-// import AboutMju2Tablet from '../../../../assets/images/About/AboutMju2Tablet.png';
-// import AboutMju3Mobile from '../../../../assets/images/About/AboutMju3Mobile.png';
-// import AboutMju3PC from '../../../../assets/images/About/AboutMju3PC.png';
-// import AboutMju3Tablet from '../../../../assets/images/About/AboutMju3Tablet.png';
-// import AboutMju1Mobile from '../../../../assets/images/About/AboutMju1Mobile.png';
 import AboutMju1 from '../../../../assets/images/About/AboutMju1.png';
 import AboutMju2 from '../../../../assets/images/About/AboutMju2.png';
 import AboutMju3 from '../../../../assets/images/About/AboutMju3.png';
