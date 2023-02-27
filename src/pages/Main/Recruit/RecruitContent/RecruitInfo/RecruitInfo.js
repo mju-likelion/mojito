@@ -8,7 +8,7 @@ const RecruitInfo = () => {
   const { mobileText, desktopText } = recruitGuide;
   return (
     <>
-      <InfoSubTitle>Recruit</InfoSubTitle>
+      <InfoSubTitle>RECRUIT</InfoSubTitle>
       <InfoTitle>11기 모집 안내</InfoTitle>
       <InfoContent>
         <ResponsiveBody mobileText={mobileText} tabletText={desktopText} desktopText={desktopText} />
@@ -59,7 +59,7 @@ const InfoContent = styled.div`
   @media ${({ theme }) => theme.devices.DESKTOP} {
     font-size: 18px;
     line-height: 28px;
-    margin-bottom: 12px 0 120px 0;
+    margin: 12px 0 120px 0;
   }
 `;
 export default RecruitInfo;
