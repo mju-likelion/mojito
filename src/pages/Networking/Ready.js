@@ -17,7 +17,7 @@ const Ready = () => {
         desktopContent={<NetworkingPc />}
       ></ResponsiveBody>
       <NetworkingBody>
-        <Title>Networking</Title>
+        <Title>NETWORKING</Title>
         <WrapContent>
           <Caution />
           <Content>준비중인 기능이에요</Content>
