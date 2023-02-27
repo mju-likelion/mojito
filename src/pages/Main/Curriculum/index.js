@@ -171,11 +171,11 @@ const Background = styled.div`
   padding: 80px 0;
   @media ${({ theme }) => theme.devices.TABLET} {
     height: 1818px;
-    padding: 160px 0;
+    padding: 100px 0;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
     height: 2706px;
-    padding: 100px 0;
+    padding: 160px 0;
   }
 `;
 
@@ -334,6 +334,9 @@ const HackathonWrapper = styled(EventSection)`
   grid-row: 2/3;
   grid-column: -2/-1;
   justify-content: flex-start;
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    margin-left: 15px;
+  }
 `;
 
 const MobileEventContainer = styled.div`
