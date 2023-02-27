@@ -52,7 +52,7 @@ const TitleWrapper = styled.div`
     height: 13px;
     margin-bottom: 4px;
   }
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 
   @media ${({ theme }) => theme.devices.TABLET} {
     width: 520px;
@@ -62,6 +62,7 @@ const TitleWrapper = styled.div`
       line-height: 34px;
       margin-bottom: 8px;
     }
+    margin-bottom: 60px;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
     width: 720px;
@@ -135,6 +136,7 @@ const Article = styled.div`
     width: 1200px;
     gap: 0 30px;
     flex-wrap: nowrap;
+    height: 268px;
   }
 `;
 

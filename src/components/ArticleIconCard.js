@@ -23,8 +23,17 @@ const ArticleCard = ({ iconName, title, text }) => {
 };
 
 const Wrapper = styled.div`
-  width: 276px;
+  :first-child {
+    height: 195px;
+  }
+  :nth-child(2) {
+    margin: 28px 0 18px 0;
+  }
+  :nth-child(4) {
+    margin-top: 17px;
+  }
   height: 252px;
+  width: 276px;
   @media ${({ theme }) => theme.devices.TABLET} {
     height: 252px;
   }
@@ -56,7 +65,6 @@ const TextMobile = styled.p`
   color: ${({ theme }) => theme.colors.GRAY2};
   font-size: 12px;
   font-weight: 400;
-  height: 96px;
   line-height: 20px;
   @media ${({ theme }) => theme.devices.TABLET} {
     display: none;
