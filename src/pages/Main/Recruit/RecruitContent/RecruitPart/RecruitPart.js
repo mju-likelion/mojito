@@ -33,7 +33,7 @@ const RecruitPart = () => {
           {Object.keys(PART_DATA).map((keyName, index) => (
             <ResponsiveBody
               key={index}
-              mobileText={
+              mobileContent={
                 <PartInfoMobile
                   partInfo={PART_DATA[keyName]}
                   key={index}
@@ -41,8 +41,8 @@ const RecruitPart = () => {
                   isSelected={clickedArray[index]}
                 />
               }
-              tabletText={<PartInfoTablet partInfo={PART_DATA[keyName]} key={index} />}
-              desktopText={<PartInfo partInfo={PART_DATA[keyName]} key={index} />}
+              tabletContent={<PartInfoTablet partInfo={PART_DATA[keyName]} key={index} />}
+              desktopContent={<PartInfo partInfo={PART_DATA[keyName]} key={index} />}
             />
           ))}
         </PartInfoBlock>

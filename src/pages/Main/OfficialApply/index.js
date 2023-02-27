@@ -9,7 +9,7 @@ const OfficialApply = () => {
   return (
     <Container>
       <ContentText>
-        <ResponsiveBody mobileText={mobileContent} tabletText={tabletContent} desktopText={desktopContent} />
+        <ResponsiveBody mobileContent={mobileContent} tabletContent={tabletContent} desktopContent={desktopContent} />
         <ProposeText>저희와 함께 가실까요?</ProposeText>
       </ContentText>
       <ButtonBox>

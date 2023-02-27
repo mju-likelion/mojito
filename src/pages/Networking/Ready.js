@@ -12,9 +12,9 @@ const Ready = () => {
   return (
     <ReadyBlock>
       <ResponsiveBody
-        mobileText={<NetworkingMobile />}
-        tabletText={<NetworkingTablet />}
-        desktopText={<NetworkingPc />}
+        mobileContent={<NetworkingMobile />}
+        tabletContent={<NetworkingTablet />}
+        desktopContent={<NetworkingPc />}
       ></ResponsiveBody>
       <NetworkingBody>
         <Title>Networking</Title>
@@ -25,9 +25,9 @@ const Ready = () => {
         </WrapContent>
         <WrapLionIcon>
           <ResponsiveBody
-            mobileText={<LionSmall />}
-            tabletText={<LionSmall />}
-            desktopText={<LionBig />}
+            mobileContent={<LionSmall />}
+            tabletContent={<LionSmall />}
+            desktopContent={<LionBig />}
           ></ResponsiveBody>
         </WrapLionIcon>
       </NetworkingBody>
@@ -120,6 +120,8 @@ const Content = styled.div`
 `;
 
 const WrapLionIcon = styled.div`
+  display: flex;
+  justify-content: center;
   margin-top: 28px;
   @media ${({ theme }) => theme.devices.TABLET} {
     margin-top: 29px;

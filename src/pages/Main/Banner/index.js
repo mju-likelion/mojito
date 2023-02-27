@@ -7,9 +7,9 @@ const Banner = () => {
   return (
     <Container>
       <ResponsiveBody
-        desktopText={<Slogan width={'1200'} height={'370'} />}
-        tabletText={<Slogan width={'568'} height={'176'} />}
-        mobileText={<Slogan width={'318'} height={'100'} />}
+        desktopContent={<Slogan width={'1200'} height={'370'} />}
+        tabletContent={<Slogan width={'568'} height={'176'} />}
+        mobileContent={<Slogan width={'318'} height={'100'} />}
       />
     </Container>
   );
