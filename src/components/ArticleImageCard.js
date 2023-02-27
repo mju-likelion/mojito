@@ -22,7 +22,21 @@ const ArticleImageCard = props => {
 const ArticleImageCardBlock = styled.div`
   display: block;
   text-align: center;
+  :nth-child(2) {
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
+  @media ${({ theme }) => theme.devices.TABLET} {
+    :nth-child(2) {
+      margin-top: 30px;
+      margin-bottom: 60px;
+    }
+  }
   @media ${({ theme }) => theme.devices.DESKTOP} {
+    :nth-child(2) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
     text-align: left;
   }
 `;
@@ -41,17 +55,14 @@ const Title = styled.div`
   font-weight: 700;
   line-height: 20px;
   font-size: 12px;
-  margin-bottom: 50px;
   @media ${({ theme }) => theme.devices.TABLET} {
+    height: 96px;
     line-height: 24px;
     font-size: 14px;
-    margin-bottom: 60px;
   }
-
   @media ${({ theme }) => theme.devices.DESKTOP} {
     font-size: 16px;
     line-height: 30px;
-    margin-bottom: 0;
   }
 `;
 
