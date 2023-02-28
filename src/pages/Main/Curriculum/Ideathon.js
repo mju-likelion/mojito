@@ -16,12 +16,10 @@ const Ideathon = () => {
         {'디자인으로 '}
         <MobileTabletBreakLine />
         {'전환하는 이벤트입니다. '}
-        <span>
-          멋사의 핵심가치인 협업을
-          <MobileTabletBreakLine />
-          <DeskTopBreakLine />
-          이루기 위한 초석
-        </span>
+        멋사의 핵심가치인 협업을
+        <MobileTabletBreakLine />
+        <DeskTopBreakLine />
+        이루기 위한 초석
         {'으로, 아이디어가 서비스로 '}
         <MobileTabletBreakLine />
         {'만들어지기 전 '}
