@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Main from './pages/Main';
 import Networking from './pages/Networking';
+import NotFoundPage from './pages/NotFound';
 import GlobalStyle from './styles/GlobalStyle';
 import { Theme } from './styles/Theme';
 
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/networking" element={<Networking />} />
+          <Route path="/*" element={<NotFoundPage />} />
         </Routes>
         <FloatingButton />
         <Footer />
