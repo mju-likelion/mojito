@@ -41,9 +41,6 @@ const MenuItem = styled.a`
   padding: 18px 16px;
   box-sizing: border-box;
   background-color: ${({ theme }) => theme.colors.GRAY1};
-  &:hover {
-    color: ${({ theme }) => theme.colors.GRAY2};
-  }
 `;
 
 export default DropDownMenu;
