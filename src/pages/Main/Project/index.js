@@ -22,7 +22,11 @@ const Project = () => {
             명지대 멋사 프로젝트 발자국 <span>소개</span>
           </IntroductionTitle>
           <IntroductionContentText>
-            <ResponsiveBody mobileText={mobileContent} tabletText={tabletContent} desktopText={desktopContent} />
+            <ResponsiveBody
+              mobileContent={mobileContent}
+              tabletContent={tabletContent}
+              desktopContent={desktopContent}
+            />
           </IntroductionContentText>
         </FolerTextBox>
         <ButtonBox href="https://github.com/mju-likelion" target="_blank">

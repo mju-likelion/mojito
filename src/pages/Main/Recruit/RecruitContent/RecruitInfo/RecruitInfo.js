@@ -11,7 +11,7 @@ const RecruitInfo = () => {
       <InfoSubTitle>RECRUIT</InfoSubTitle>
       <InfoTitle>11기 모집 안내</InfoTitle>
       <InfoContent>
-        <ResponsiveBody mobileText={mobileText} tabletText={desktopText} desktopText={desktopText} />
+        <ResponsiveBody mobileContent={mobileText} tabletContent={desktopText} desktopContent={desktopText} />
       </InfoContent>
     </>
   );

@@ -31,7 +31,7 @@ const Curriculum = () => {
             크로스오버로 협업을 위한 과정을 배워갑니다.
           </PartCurriculumText>
           <ResponsiveBody
-            mobileText={
+            mobileContent={
               <>
                 <Chart>
                   <MobileWebChart />
@@ -60,7 +60,7 @@ const Curriculum = () => {
                 </EventBackground>
               </>
             }
-            tabletText={
+            tabletContent={
               <>
                 <Chart>
                   <TabletChart />
@@ -83,7 +83,7 @@ const Curriculum = () => {
                 </EventBackground>
               </>
             }
-            desktopText={
+            desktopContent={
               <>
                 <Chart>
                   <PcChart />

@@ -1,23 +1,25 @@
 import styled from 'styled-components';
 
-import { ReactComponent as CautionIcon } from '../../assets/images/caution_illust.svg';
-import { ReactComponent as LionSmall } from '../../assets/images/lion_construct_mobile.svg';
-import { ReactComponent as LionBig } from '../../assets/images/lion_construct_pc.svg';
-import { ReactComponent as NetworkingMobile } from '../../assets/images/networking_mobile.svg';
-import { ReactComponent as NetworkingPc } from '../../assets/images/networking_pc.svg';
-import { ReactComponent as NetworkingTablet } from '../../assets/images/networking_tablet.svg';
+import { ReactComponent as CautionIcon } from '../../assets/images/Networking/caution_illust.svg';
+import { ReactComponent as LionSmall } from '../../assets/images/Networking/lion_construct_mobile.svg';
+import { ReactComponent as LionBig } from '../../assets/images/Networking/lion_construct_pc.svg';
+import { ReactComponent as NetworkingMobile } from '../../assets/images/Networking/networking_mobile.svg';
+import { ReactComponent as NetworkingPc } from '../../assets/images/Networking/networking_pc.svg';
+import { ReactComponent as NetworkingTablet } from '../../assets/images/Networking/networking_tablet.svg';
 import ResponsiveBody from '../../components/ResponsiveBody';
 
 const Ready = () => {
   return (
     <ReadyBlock>
-      <ResponsiveBody
-        mobileText={<NetworkingMobile />}
-        tabletText={<NetworkingTablet />}
-        desktopText={<NetworkingPc />}
-      ></ResponsiveBody>
+      <ResponsiveBox>
+        <ResponsiveBody
+          mobileContent={<NetworkingMobile />}
+          tabletContent={<NetworkingTablet />}
+          desktopContent={<NetworkingPc />}
+        ></ResponsiveBody>
+      </ResponsiveBox>
       <NetworkingBody>
-        <Title>Networking</Title>
+        <Title>NETWORKING</Title>
         <WrapContent>
           <Caution />
           <Content>준비중인 기능이에요</Content>
@@ -25,15 +27,16 @@ const Ready = () => {
         </WrapContent>
         <WrapLionIcon>
           <ResponsiveBody
-            mobileText={<LionSmall />}
-            tabletText={<LionSmall />}
-            desktopText={<LionBig />}
+            mobileContent={<LionSmall />}
+            tabletContent={<LionSmall />}
+            desktopContent={<LionBig />}
           ></ResponsiveBody>
         </WrapLionIcon>
       </NetworkingBody>
     </ReadyBlock>
   );
 };
+const ResponsiveBox = styled.div``;
 
 const ReadyBlock = styled.div`
   display: flex;
@@ -50,17 +53,16 @@ const ReadyBlock = styled.div`
 `;
 
 const NetworkingBody = styled.div`
-  height: 320px;
+  height: 286px;
   width: 318px;
   border-radius: 0 0 12px 12px;
   background-color: #303030;
   text-align: center;
   @media ${({ theme }) => theme.devices.TABLET} {
-    height: 320px;
     width: 568px;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
-    height: 500px;
+    height: 466px;
     width: 1200px;
   }
 `;
@@ -72,8 +74,7 @@ const Title = styled.div`
   line-height: 13px;
   font-size: 10px;
   margin-top: 42px;
-  @media ${({ theme }) => theme.devices.TABLET} {
-    margin-top: 60px;
+  @media ${({ theme }) => theme.devices.DESKTOP} {
     font-size: 16px;
     line-height: 20px;
   }
@@ -90,12 +91,8 @@ const WrapContent = styled.div`
 `;
 
 const Caution = styled(CautionIcon)`
-  height: 30px;
-  line-height: 30px;
-  @media ${({ theme }) => theme.devices.TABLET} {
-    line-height: 34px;
-    height: 34px;
-  }
+  width: 28px;
+  height: 34px;
   @media ${({ theme }) => theme.devices.DESKTOP} {
     line-height: 56px;
     height: 56px;
@@ -107,11 +104,11 @@ const Content = styled.div`
   font-weight: 700;
   font-size: 22px;
   line-height: 30px;
-  padding: 0 18px;
+  margin: 0 18px;
   @media ${({ theme }) => theme.devices.TABLET} {
     font-size: 26px;
     line-height: 34px;
-    padding: 0 26px;
+    margin: 0 27px;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
     font-size: 40px;
@@ -120,6 +117,8 @@ const Content = styled.div`
 `;
 
 const WrapLionIcon = styled.div`
+  display: flex;
+  justify-content: center;
   margin-top: 28px;
   @media ${({ theme }) => theme.devices.TABLET} {
     margin-top: 29px;

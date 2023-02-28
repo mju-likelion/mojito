@@ -1,21 +1,27 @@
 import styled from 'styled-components';
 
-const ResponsiveBody = ({ mobileText, tabletText, desktopText }) => {
+const ResponsiveBody = ({ mobileContent, tabletContent, desktopContent }) => {
   return (
-    <>
-      <MobileText>{mobileText}</MobileText>
-      <TabletText>{tabletText}</TabletText>
-      <DesktopText>{desktopText}</DesktopText>
-    </>
+    <Container>
+      <MobileContent>{mobileContent}</MobileContent>
+      <TabletContent>{tabletContent}</TabletContent>
+      <DesktopContent>{desktopContent}</DesktopContent>
+    </Container>
   );
 };
 
-const MobileText = styled.div`
+const Container = styled.div`
+  & svg {
+    display: block;
+  }
+`;
+
+const MobileContent = styled.div`
   @media ${({ theme }) => theme.devices.TABLET} {
     display: none;
   }
 `;
-const TabletText = styled.div`
+const TabletContent = styled.div`
   display: none;
 
   @media ${({ theme }) => theme.devices.TABLET} {
@@ -26,7 +32,7 @@ const TabletText = styled.div`
   }
 `;
 
-const DesktopText = styled.div`
+const DesktopContent = styled.div`
   display: none;
   @media ${({ theme }) => theme.devices.DESKTOP} {
     display: block;
