@@ -23,14 +23,35 @@ const ArticleCard = ({ iconName, title, text }) => {
 };
 
 const Wrapper = styled.div`
-  width: 276px;
+  :first-child {
+    height: 195px;
+  }
+  :nth-child(2) {
+    margin: 28px 0 18px 0;
+  }
+  :nth-child(4) {
+    margin-top: 17px;
+  }
   height: 252px;
+  width: 276px;
   @media ${({ theme }) => theme.devices.TABLET} {
     height: 252px;
+    :nth-child(2) {
+      margin: 0;
+    }
+    :nth-child(4) {
+      margin-top: 0;
+    }
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
     width: 278px;
     height: 268px;
+    :nth-child(2) {
+      margin: 0;
+    }
+    :nth-child(4) {
+      margin-top: 0;
+    }
   }
 `;
 
@@ -56,7 +77,6 @@ const TextMobile = styled.p`
   color: ${({ theme }) => theme.colors.GRAY2};
   font-size: 12px;
   font-weight: 400;
-  height: 96px;
   line-height: 20px;
   @media ${({ theme }) => theme.devices.TABLET} {
     display: none;
@@ -93,8 +113,11 @@ const TextPc = styled.p`
 `;
 
 const Hr = styled.hr`
+  margin: 18px auto;
   border: 1px solid ${({ theme }) => theme.colors.GRAY1};
-  margin: 20px auto;
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    margin: 20px auto;
+  }
 `;
 
 export default ArticleCard;

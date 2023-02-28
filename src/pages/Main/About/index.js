@@ -39,9 +39,7 @@ const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 80px;
-  @media ${({ theme }) => theme.devices.TABLET} {
-    margin-top: 80px;
-  }
+
   @media ${({ theme }) => theme.devices.DESKTOP} {
     margin-top: 200px;
   }
