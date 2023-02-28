@@ -113,8 +113,11 @@ const TextPc = styled.p`
 `;
 
 const Hr = styled.hr`
+  margin: 18px auto;
   border: 1px solid ${({ theme }) => theme.colors.GRAY1};
-  margin: 20px auto;
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    margin: 20px auto;
+  }
 `;
 
 export default ArticleCard;
