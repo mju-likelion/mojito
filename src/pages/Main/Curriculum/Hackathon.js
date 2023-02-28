@@ -110,10 +110,10 @@ const GradientBox = styled.div`
     width: 85.31px;
     border-radius: 4px;
     :first-child {
-      background: linear-gradient(-90deg, transparent 0, #272727 100%);
+      background: linear-gradient(-90deg, transparent 0, #2f2f2f 100%);
     }
     :last-child {
-      background: linear-gradient(90deg, transparent 0, #272727 100%);
+      background: linear-gradient(90deg, transparent 0, #2f2f2f 100%);
     }
   }
 
