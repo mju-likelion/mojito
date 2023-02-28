@@ -36,15 +36,7 @@ const Ready = () => {
     </ReadyBlock>
   );
 };
-const ResponsiveBox = styled.div`
-  //이건 디자인 마진 의도 확인하고
-  // margin-top: 102px;
-  @media ${({ theme }) => theme.devices.TABLET} {
-    // margin-top: 200px;
-  }
-  @media ${({ theme }) => theme.devices.DESKTOP} {
-  }
-`;
+const ResponsiveBox = styled.div``;
 
 const ReadyBlock = styled.div`
   display: flex;
@@ -66,11 +58,8 @@ const NetworkingBody = styled.div`
   border-radius: 0 0 12px 12px;
   background-color: #303030;
   text-align: center;
-  //margin-bottom: 29px; //채널톡 영역 어떻게 되는건지?
-  //이것도 디자인 마진 의도 확인하고
   @media ${({ theme }) => theme.devices.TABLET} {
     width: 568px;
-    //  margin-bottom: 185px;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
     height: 466px;
