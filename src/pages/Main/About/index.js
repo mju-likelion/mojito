@@ -28,10 +28,10 @@ const Wrapper = styled.div`
   align-items: center;
   margin: 26px auto 80px;
   @media ${({ theme }) => theme.devices.TABLET} {
-    margin: 30px auto 85px auto;
+    margin: 30px auto 100px auto;
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
-    margin: 90px auto;
+    margin: 90px auto 160px auto;
   }
 `;
 
