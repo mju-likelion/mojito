@@ -39,16 +39,17 @@ const Ready = () => {
 const ResponsiveBox = styled.div``;
 
 const ReadyBlock = styled.div`
+  padding: 120px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 56px - 160px);
+  min-height: calc(100vh - 56px - 160px - 240px);
   @media ${({ theme }) => theme.devices.TABLET} {
-    min-height: calc(100vh - 70px - 170px);
+    min-height: calc(100vh - 70px - 170px - 240px);
   }
   @media ${({ theme }) => theme.devices.DESKTOP} {
-    min-height: calc(100vh - 70px - 232px);
+    min-height: calc(100vh - 70px - 232px - 240px);
   }
 `;
 
