@@ -16,8 +16,7 @@ const Hackathon = ({ screen }) => {
       <EventText>
         {'파트간의 협업을 통하여 아이디어를 '}
         <MobileTabletBreakLine />
-        {'실제 서비스로 완성'}
-        하는
+        {'실제 서비스로 완성하는 '}
         <DeskTopBreakLine />
         {'멋사의 가장 큰 이벤트입니다. '}
         <MobileTabletBreakLine />
