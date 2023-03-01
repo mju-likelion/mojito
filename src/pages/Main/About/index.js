@@ -14,7 +14,7 @@ const About = () => {
           <AboutMJU />
         </div>
         <ButtonWrapper>
-          <Button text={'지원하기'} handleClick={() => window.open('https://apply.mju-likelion.com/', '_blank')} />
+          <Button text={'지원하기'} handleClick={() => window.open(process.env.REACT_APP_APPLY_URL, '_blank')} />
         </ButtonWrapper>
       </Wrapper>
     </>

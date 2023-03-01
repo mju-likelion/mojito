@@ -21,7 +21,7 @@ const Footer = () => {
           text={isCopySuccess ? '메일 주소가 복사되었습니다' : '메일 주소 복사에 실패하였습니다'}
         />
       )}
-      <RouteApplyBox href={'https://apply.mju-likelion.com/'} target="_blank" rel="noopener noreferrer">
+      <RouteApplyBox href={process.env.REACT_APP_APPLY_URL} target="_blank" rel="noopener noreferrer">
         <RouteApplyBtn>멋쟁이사자처럼 명지대(자연) 11기 APPLY</RouteApplyBtn>
         <ArrowIcon />
       </RouteApplyBox>
