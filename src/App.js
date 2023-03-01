@@ -5,6 +5,7 @@ import ChannelService from './components/ChannelTalk/ChannelService';
 import FloatingButton from './components/ChannelTalk/FloatingButton';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import NotSupportingBrowserAlert from './components/NotSupportingBrowserAlert';
 import useRouteTracker from './hooks/useRouteTracker';
 import Main from './pages/Main';
 import Networking from './pages/Networking';
@@ -14,23 +15,33 @@ import { Theme } from './styles/Theme';
 
 function App() {
   useRouteTracker();
+
   ChannelService.boot({
     pluginKey: process.env.REACT_APP_CHANNEL_TALK, // fill your plugin key
     customLauncherSelector: '#custom-button', // 커스텀 버튼
     hideChannelButtonOnBoot: true,
   });
+
+  const ua = window.navigator.userAgent;
+
   return (
     <>
       <ThemeProvider theme={Theme}>
         <GlobalStyle />
-        <Header />
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/networking" element={<Networking />} />
-          <Route path="/*" element={<NotFoundPage />} />
-        </Routes>
-        <FloatingButton />
-        <Footer />
+        {ua.includes('Android') && ua.includes('Instagram') ? (
+          <NotSupportingBrowserAlert />
+        ) : (
+          <>
+            <Header />
+            <Routes>
+              <Route path="/" element={<Main />} />
+              <Route path="/networking" element={<Networking />} />
+              <Route path="/*" element={<NotFoundPage />} />
+            </Routes>
+            <FloatingButton />
+            <Footer />
+          </>
+        )}
       </ThemeProvider>
     </>
   );
