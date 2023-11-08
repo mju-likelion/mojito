@@ -1,4 +1,5 @@
 # [MJU LIKELION OFFICIAL Project](https://beta.mju-likelion.com/)
+![main](https://github.com/mju-likelion/mojito/assets/63037629/94e03f92-27d1-4cc3-9951-9d1ce46f6450)
 
 ## 📂 Folder Structure
 
