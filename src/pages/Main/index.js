@@ -1,3 +1,5 @@
+import EasterEgg from '../../components/EasterEgg';
+
 import About from './About';
 import Banner from './Banner';
 import Curriculum from './Curriculum';
@@ -14,6 +16,7 @@ const Main = () => {
       <Project />
       <Recruit />
       <OfficialApply />
+      <EasterEgg />
     </>
   );
 };
