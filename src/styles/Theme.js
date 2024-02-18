@@ -10,6 +10,7 @@ export const Theme = {
     BLUE2: '#7A9FFF',
     RED: '#FF6868',
     WHITE: '#FFFFFF',
+    WHITE2: 'F9F3F3',
     GREEN: '#6AFFB8',
     PINK1: '#DB627B',
     PINK2: '#FF9DAE',
