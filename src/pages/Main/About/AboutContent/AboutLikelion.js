@@ -46,7 +46,7 @@ const TitleWrapper = styled.div`
   }
   h3 {
     font-family: 'Montserrat';
-    color: ${({ theme }) => theme.colors.BLUE1};
+    color: ${({ theme }) => theme.colors.PINK1};
     font-size: 10px;
     font-weight: 500;
     height: 13px;

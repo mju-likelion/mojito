@@ -132,8 +132,8 @@ export const MobileTabletBreakLine = styled.br`
 export const BlueTitle = styled.div`
   box-sizing: border-box;
   display: inline-block;
-  border: 1px solid ${({ theme }) => theme.colors.BLUE1};
-  color: ${({ theme }) => theme.colors.BLUE1};
+  border: 1px solid ${({ theme }) => theme.colors.PINK1};
+  color: ${({ theme }) => theme.colors.PINK1};
   font-weight: 700;
   border-radius: 100px;
   padding: 7px 30px;
@@ -193,7 +193,7 @@ const Container = styled.div`
 const RoadmapText = styled.p`
   font-family: 'Montserrat';
   font-size: 10px;
-  color: ${({ theme }) => theme.colors.BLUE1};
+  color: ${({ theme }) => theme.colors.PINK1};
   font-weight: 500;
   line-height: 13px;
 

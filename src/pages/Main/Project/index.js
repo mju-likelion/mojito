@@ -61,7 +61,7 @@ const FolderTopLineSvg = styled(FolderTop)`
 `;
 
 const FolderContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.BLUE1};
+  background-color: ${({ theme }) => theme.colors.PINK1};
   box-sizing: border-box;
 
   width: 318px;

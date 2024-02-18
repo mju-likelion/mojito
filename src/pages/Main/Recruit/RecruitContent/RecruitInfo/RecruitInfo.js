@@ -18,7 +18,7 @@ const RecruitInfo = () => {
 };
 
 const InfoSubTitle = styled.div`
-  color: ${({ theme }) => theme.colors.BLUE1};
+  color: ${({ theme }) => theme.colors.PINK1};
   font-family: 'Montserrat';
   font-size: 10px;
   font-weight: 500;

@@ -13,7 +13,7 @@ export const Theme = {
     GREEN: '#6AFFB8',
     PINK1: '#DB627B',
     PINK2: '#FF9DAE',
-    PINK3: '#FFC0CB'
+    PINK3: '#FFC0CB',
   },
   devices: {
     DESKTOP: `(min-width: 1200px)`,

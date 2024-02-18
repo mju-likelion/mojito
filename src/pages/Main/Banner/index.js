@@ -18,7 +18,7 @@ const Banner = () => {
 const Container = styled.div`
   width: 100%;
   height: 198px;
-  background-color: ${({ theme }) => theme.colors.BLUE1};
+  background-color: ${({ theme }) => theme.colors.PINK1};
   display: flex;
   justify-content: center;
   align-items: center;
