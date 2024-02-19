@@ -25,7 +25,7 @@ const Footer = () => {
         <RouteApplyBtn>멋쟁이사자처럼 명지대(자연) 12기 APPLY</RouteApplyBtn>
         <ArrowIcon />
       </RouteApplyBox>
-      <CopyrightBox>© 2023. LIKELION MJU All pictures cannot be copied without permission.</CopyrightBox>
+      <CopyrightBox>© 2024. LIKELION MJU All pictures cannot be copied without permission.</CopyrightBox>
     </FooterBox>
   );
 };
