@@ -1,6 +1,6 @@
-import AboutMju1 from '../../../../assets/images/About/AboutMju1.png';
-import AboutMju2 from '../../../../assets/images/About/AboutMju2.png';
-import AboutMju3 from '../../../../assets/images/About/AboutMju3.png';
+import AboutMju1 from '../../../../assets/images/About/AboutMju11_1.png';
+import AboutMju2 from '../../../../assets/images/About/AboutMju11_2.png';
+import AboutMju3 from '../../../../assets/images/About/AboutMju11_3.png';
 
 export const ABOUT_MJU_LIEKLIONS = {
   pc: [
