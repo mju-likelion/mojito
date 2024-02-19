@@ -9,7 +9,7 @@ const RecruitInfo = () => {
   return (
     <>
       <InfoSubTitle>RECRUIT</InfoSubTitle>
-      <InfoTitle>11기 모집 안내</InfoTitle>
+      <InfoTitle>12기 모집 안내</InfoTitle>
       <InfoContent>
         <ResponsiveBody mobileContent={mobileText} tabletContent={desktopText} desktopContent={desktopText} />
       </InfoContent>
