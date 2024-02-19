@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { ReactComponent as PcArrow } from '../../../assets/images/curriculum_line_pc_pink.svg';
 import { ReactComponent as MobileArrow } from '../../../assets/images/curriculum_line_pink_mobile.svg';
 import { ReactComponent as TabletArrow } from '../../../assets/images/curriculum_line_tablet_pink.svg';
-import { ReactComponent as MobileDesignChart } from '../../../assets/images/curriculum_mobile_design.svg';
 import { ReactComponent as MobileServerChart } from '../../../assets/images/curriculum_mobile_server.svg';
 import { ReactComponent as MobileWebChart } from '../../../assets/images/curriculum_mobile_web.svg';
 import { ReactComponent as PcChart } from '../../../assets/images/curriculum_pc_pink.svg';
@@ -38,9 +37,6 @@ const Curriculum = () => {
                 </Chart>
                 <Chart>
                   <MobileServerChart />
-                </Chart>
-                <Chart>
-                  <MobileDesignChart />
                 </Chart>
                 <EventBackground>
                   <MobileArrowContainer>
