@@ -23,8 +23,8 @@ const Curriculum = () => {
           <RoadmapText>ROADMAP</RoadmapText>
           <PartCurriculumTitle>파트 및 커리큘럼</PartCurriculumTitle>
           <PartCurriculumText>
-            멋쟁이사자처럼 명지대(자연) 11기에서는 <MobileBreakLine />
-            웹, 서버, 기획/디자인 파트로 나누어 진행됩니다. <MobileBreakLine />
+            멋쟁이사자처럼 명지대(자연) 12기에서는 <MobileBreakLine />
+            웹, 서버 파트로 나누어 진행됩니다. <MobileBreakLine />
             <DesktopTabletBreakLine />각 파트별로 회원들의 실력 향상과 프로젝트 아웃풋을 <MobileBreakLine />
             위한 각 파트별 커리큘럼이 운영되며, <DesktopTabletBreakLine />
             다른 파트와의 <MobileBreakLine />
