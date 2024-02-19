@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-import CurriculumPCHackathon0 from '../../../assets/images/curriculum_pc_hackathon0.png';
-import CurriculumPCHackathon1 from '../../../assets/images/curriculum_pc_hackathon1.png';
-import CurriculumPCHackathon2 from '../../../assets/images/curriculum_pc_hackathon2.png';
-import CurriculumTabletHackathon0 from '../../../assets/images/curriculum_tablet_hackathon0.png';
-import CurriculumTabletHackathon1 from '../../../assets/images/curriculum_tablet_hackathon1.png';
-import CurriculumTabletHackathon2 from '../../../assets/images/curriculum_tablet_hackathon2.png';
+import CurriculumPCHackathon0 from '../../../assets/images/curriculum_pc_hackathon11th0.png';
+import CurriculumPCHackathon1 from '../../../assets/images/curriculum_pc_hackathon11th1.png';
+import CurriculumPCHackathon2 from '../../../assets/images/curriculum_pc_hackathon11th2.png';
+import CurriculumTabletHackathon0 from '../../../assets/images/curriculum_tablet_hackathon11th0.png';
+import CurriculumTabletHackathon1 from '../../../assets/images/curriculum_tablet_hackathon11th1.png';
+import CurriculumTabletHackathon2 from '../../../assets/images/curriculum_tablet_hackathon11th2.png';
 
 import { PinkTitle, DeskTopBreakLine, MobileTabletBreakLine, EventText } from '.';
 
@@ -20,7 +20,7 @@ const Hackathon = ({ screen }) => {
         <DeskTopBreakLine />
         {'멋사의 가장 큰 이벤트입니다. '}
         <MobileTabletBreakLine />
-        {'웹-서버-기획/디자인 파트별로'}
+        {'웹-서버 파트별로'}
         <MobileTabletBreakLine />
         <DeskTopBreakLine />
         수 주간의 세션을 통해 익혔던 지식과 기술을
