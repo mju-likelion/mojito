@@ -7,12 +7,12 @@ import CurriculumTabletHackathon0 from '../../../assets/images/curriculum_tablet
 import CurriculumTabletHackathon1 from '../../../assets/images/curriculum_tablet_hackathon1.png';
 import CurriculumTabletHackathon2 from '../../../assets/images/curriculum_tablet_hackathon2.png';
 
-import { BlueTitle, DeskTopBreakLine, MobileTabletBreakLine, EventText } from '.';
+import { PinkTitle, DeskTopBreakLine, MobileTabletBreakLine, EventText } from '.';
 
 const Hackathon = ({ screen }) => {
   return (
     <>
-      <BlueTitle>해커톤</BlueTitle>
+      <PinkTitle>해커톤</PinkTitle>
       <EventText>
         {'파트간의 협업을 통하여 아이디어를 '}
         <MobileTabletBreakLine />

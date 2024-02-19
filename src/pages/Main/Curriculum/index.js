@@ -129,7 +129,7 @@ export const MobileTabletBreakLine = styled.br`
   }
 `;
 
-export const BlueTitle = styled.div`
+export const PinkTitle = styled.div`
   box-sizing: border-box;
   display: inline-block;
   border: 1px solid ${({ theme }) => theme.colors.PINK1};
