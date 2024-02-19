@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
-import Slogan from '../../../assets/images/Slogan';
+import Slogan12th from '../../../assets/images/Slogan12th';
 import ResponsiveBody from '../../../components/ResponsiveBody';
 
 const Banner = () => {
   return (
     <Container>
       <ResponsiveBody
-        desktopContent={<Slogan width={'1200'} height={'370'} />}
-        tabletContent={<Slogan width={'568'} height={'176'} />}
-        mobileContent={<Slogan width={'318'} height={'100'} />}
+        desktopContent={<Slogan12th width={'1200'} height={'370'} />}
+        tabletContent={<Slogan12th width={'568'} height={'176'} />}
+        mobileContent={<Slogan12th width={'318'} height={'100'} />}
       />
     </Container>
   );
