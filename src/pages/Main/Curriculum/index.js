@@ -6,7 +6,7 @@ import { ReactComponent as TabletArrow } from '../../../assets/images/curriculum
 import { ReactComponent as MobileDesignChart } from '../../../assets/images/curriculum_mobile_design.svg';
 import { ReactComponent as MobileServerChart } from '../../../assets/images/curriculum_mobile_server.svg';
 import { ReactComponent as MobileWebChart } from '../../../assets/images/curriculum_mobile_web.svg';
-import { ReactComponent as PcChart } from '../../../assets/images/curriculum_pc.svg';
+import { ReactComponent as PcChart } from '../../../assets/images/curriculum_pc_pink.svg';
 import { ReactComponent as TabletChart } from '../../../assets/images/curriculum_tablet.svg';
 import ResponsiveBody from '../../../components/ResponsiveBody';
 
