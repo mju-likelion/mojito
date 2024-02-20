@@ -13,8 +13,8 @@ const TitleButtonBlock = styled.div`
 
 const Title = styled.div`
   display: inline-block;
-  color: ${({ theme }) => theme.colors.BLUE1};
-  border: 1px solid ${({ theme }) => theme.colors.BLUE1};
+  color: ${({ theme }) => theme.colors.PINK1};
+  border: 1px solid ${({ theme }) => theme.colors.PINK1};
   border-radius: 100px;
   padding: 7px 30px;
   font-size: 14px;

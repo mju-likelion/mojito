@@ -70,7 +70,7 @@ const NetworkingBody = styled.div`
 
 const Title = styled.div`
   font-family: 'Montserrat';
-  color: ${({ theme }) => theme.colors.BLUE1};
+  color: ${({ theme }) => theme.colors.PINK1};
   font-weight: 500;
   line-height: 13px;
   font-size: 10px;

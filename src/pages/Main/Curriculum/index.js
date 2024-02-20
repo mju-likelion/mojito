@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
-import { ReactComponent as MobileArrow } from '../../../assets/images/curriculum_line_mobile.svg';
-import { ReactComponent as PcArrow } from '../../../assets/images/curriculum_line_pc.svg';
-import { ReactComponent as TabletArrow } from '../../../assets/images/curriculum_line_tablet.svg';
-import { ReactComponent as MobileDesignChart } from '../../../assets/images/curriculum_mobile_design.svg';
+import { ReactComponent as PcArrow } from '../../../assets/images/curriculum_line_pc_pink.svg';
+import { ReactComponent as MobileArrow } from '../../../assets/images/curriculum_line_pink_mobile.svg';
+import { ReactComponent as TabletArrow } from '../../../assets/images/curriculum_line_tablet_pink.svg';
 import { ReactComponent as MobileServerChart } from '../../../assets/images/curriculum_mobile_server.svg';
 import { ReactComponent as MobileWebChart } from '../../../assets/images/curriculum_mobile_web.svg';
-import { ReactComponent as PcChart } from '../../../assets/images/curriculum_pc.svg';
-import { ReactComponent as TabletChart } from '../../../assets/images/curriculum_tablet.svg';
+import { ReactComponent as PcChart } from '../../../assets/images/curriculum_pc_pink.svg';
+import { ReactComponent as TabletChart } from '../../../assets/images/curriculum_tablet_pink.svg';
 import ResponsiveBody from '../../../components/ResponsiveBody';
 
 import Hackathon from './Hackathon';
@@ -23,8 +22,8 @@ const Curriculum = () => {
           <RoadmapText>ROADMAP</RoadmapText>
           <PartCurriculumTitle>파트 및 커리큘럼</PartCurriculumTitle>
           <PartCurriculumText>
-            멋쟁이사자처럼 명지대(자연) 11기에서는 <MobileBreakLine />
-            웹, 서버, 기획/디자인 파트로 나누어 진행됩니다. <MobileBreakLine />
+            멋쟁이사자처럼 명지대(자연) 12기에서는 <MobileBreakLine />
+            웹, 서버 파트로 나누어 진행됩니다. <MobileBreakLine />
             <DesktopTabletBreakLine />각 파트별로 회원들의 실력 향상과 프로젝트 아웃풋을 <MobileBreakLine />
             위한 각 파트별 커리큘럼이 운영되며, <DesktopTabletBreakLine />
             다른 파트와의 <MobileBreakLine />
@@ -38,9 +37,6 @@ const Curriculum = () => {
                 </Chart>
                 <Chart>
                   <MobileServerChart />
-                </Chart>
-                <Chart>
-                  <MobileDesignChart />
                 </Chart>
                 <EventBackground>
                   <MobileArrowContainer>
@@ -129,11 +125,11 @@ export const MobileTabletBreakLine = styled.br`
   }
 `;
 
-export const BlueTitle = styled.div`
+export const PinkTitle = styled.div`
   box-sizing: border-box;
   display: inline-block;
-  border: 1px solid ${({ theme }) => theme.colors.BLUE1};
-  color: ${({ theme }) => theme.colors.BLUE1};
+  border: 1px solid ${({ theme }) => theme.colors.PINK1};
+  color: ${({ theme }) => theme.colors.PINK1};
   font-weight: 700;
   border-radius: 100px;
   padding: 7px 30px;
@@ -193,7 +189,7 @@ const Container = styled.div`
 const RoadmapText = styled.p`
   font-family: 'Montserrat';
   font-size: 10px;
-  color: ${({ theme }) => theme.colors.BLUE1};
+  color: ${({ theme }) => theme.colors.PINK1};
   font-weight: 500;
   line-height: 13px;
 

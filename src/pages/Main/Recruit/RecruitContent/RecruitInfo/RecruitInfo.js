@@ -9,7 +9,7 @@ const RecruitInfo = () => {
   return (
     <>
       <InfoSubTitle>RECRUIT</InfoSubTitle>
-      <InfoTitle>11기 모집 안내</InfoTitle>
+      <InfoTitle>12기 모집 안내</InfoTitle>
       <InfoContent>
         <ResponsiveBody mobileContent={mobileText} tabletContent={desktopText} desktopContent={desktopText} />
       </InfoContent>
@@ -18,7 +18,7 @@ const RecruitInfo = () => {
 };
 
 const InfoSubTitle = styled.div`
-  color: ${({ theme }) => theme.colors.BLUE1};
+  color: ${({ theme }) => theme.colors.PINK1};
   font-family: 'Montserrat';
   font-size: 10px;
   font-weight: 500;
