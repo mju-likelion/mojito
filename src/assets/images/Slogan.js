@@ -1,4 +1,4 @@
-const Slogan = ({ width = '1200', height = '370' }) => {
+const Slogan12th = ({ width = '1200', height = '370' }) => {
   return (
     <svg width={width} height={height} viewBox="0 0 1200 370" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -106,4 +106,4 @@ const Slogan = ({ width = '1200', height = '370' }) => {
   );
 };
 
-export default Slogan;
+export default Slogan12th;

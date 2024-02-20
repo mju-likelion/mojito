@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ReactComponent as FolderTop } from '../../../assets/images/Subtract.svg';
+import { ReactComponent as FolderTop } from '../../../assets/images/Subtract_pink.svg';
 import Button from '../../../components/Button';
 import ResponsiveBody from '../../../components/ResponsiveBody';
 
@@ -61,7 +61,7 @@ const FolderTopLineSvg = styled(FolderTop)`
 `;
 
 const FolderContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.BLUE1};
+  background-color: ${({ theme }) => theme.colors.PINK1};
   box-sizing: border-box;
 
   width: 318px;

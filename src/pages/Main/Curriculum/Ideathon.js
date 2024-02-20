@@ -1,9 +1,9 @@
-import { BlueTitle, EventText, DeskTopBreakLine, MobileTabletBreakLine } from '.';
+import { PinkTitle, EventText, DeskTopBreakLine, MobileTabletBreakLine } from '.';
 
 const Ideathon = () => {
   return (
     <>
-      <BlueTitle>아이디어톤</BlueTitle>
+      <PinkTitle>아이디어톤</PinkTitle>
       <EventText>
         {'웹서비스로 실현하고 싶은 아이디어의 싹을 틔우는 '}
         <MobileTabletBreakLine />

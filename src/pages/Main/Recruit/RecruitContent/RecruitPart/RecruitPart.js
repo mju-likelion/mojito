@@ -58,7 +58,8 @@ const PartInfoBlock = styled.div`
 `;
 
 const RecruitPartBlock = styled.div`
-  display: table;
+  display: flex;
+  justify-content: center;
   margin: 40px auto 60px auto;
 
   @media ${({ theme }) => theme.devices.TABLET} {

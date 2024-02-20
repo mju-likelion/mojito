@@ -33,7 +33,7 @@ const AboutMJU = () => {
 /** @TODO 현재 태블릿, 모바일 버전 svg 컴포넌트 내용이 pc버전 내용임, 버전에 맞게 수정 필요 */
 
 const Wrapper = styled.div`
-  color: ${({ theme }) => theme.colors.BLUE1};
+  color: ${({ theme }) => theme.colors.PINK1};
   font-weight: 700;
   width: 318px;
   margin: auto;
@@ -69,7 +69,7 @@ const Wrapper = styled.div`
 
 const Hr = styled.hr`
   height: 1px;
-  background-color: ${({ theme }) => theme.colors.BLUE1};
+  background-color: ${({ theme }) => theme.colors.PINK1};
   border: none;
   margin: 6px auto 20px auto;
   width: 262px;
