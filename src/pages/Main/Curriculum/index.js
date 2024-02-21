@@ -163,7 +163,6 @@ const Background = styled.div`
   box-sizing: border-box;
   background-color: ${({ theme }) => theme.colors.GRAY1};
   width: 100%;
-  height: 2936px;
   padding: 80px 0;
   @media ${({ theme }) => theme.devices.TABLET} {
     height: 1818px;
