@@ -12,10 +12,9 @@ const OfficialApply = () => {
         <ResponsiveBody mobileContent={mobileContent} tabletContent={tabletContent} desktopContent={desktopContent} />
         <ProposeText>저희와 함께 가실까요?</ProposeText>
       </ContentText>
-      <ButtonBox>
+      {/* <ButtonBox>
         <Button text={'지원하기'} handleClick={() => window.open(process.env.REACT_APP_APPLY_URL, '_blank')} />
-        {/* 이거 나중에 링크 최종본으로 변경 -> 민쥐가 일단 했습니다 */}
-      </ButtonBox>
+      </ButtonBox> */}
     </Container>
   );
 };

@@ -13,9 +13,9 @@ const About = () => {
           <AboutLikelion />
           <AboutMJU />
         </div>
-        <ButtonWrapper>
+        {/* <ButtonWrapper>
           <Button text={'지원하기'} handleClick={() => window.open(process.env.REACT_APP_APPLY_URL, '_blank')} />
-        </ButtonWrapper>
+        </ButtonWrapper> */}
       </Wrapper>
     </>
   );
