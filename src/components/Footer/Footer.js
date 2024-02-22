@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import styled from 'styled-components';
 
-import { ReactComponent as ArrowIcon } from '../../assets/images/icon_footer_arrow.svg';
+// import { ReactComponent as ArrowIcon } from '../../assets/images/icon_footer_arrow.svg';
 
 import Toast from './../Toast';
 import FooterIcons from './FooterIcons';
