@@ -1,4 +1,4 @@
-# [MJU LIKELION OFFICIAL Project](https://beta.mju-likelion.com/)
+# [MJU LIKELION OFFICIAL Project](https://mju-likelion.org/)
 ![main](https://github.com/mju-likelion/mojito/assets/63037629/94e03f92-27d1-4cc3-9951-9d1ce46f6450)
 
 ## 📂 Folder Structure
@@ -40,9 +40,9 @@
 ### 🤝 Naming Rule
 
 - 컴포넌트, 파일명 ⇒ PascalCase
-- 변수, 함수 ⇒ carmelCase
-- 폴더명 ⇒ carmelCase
-- 파라미터 ⇒ carmelCase
+- 변수, 함수 ⇒ camelCase
+- 폴더명 ⇒ camelCase
+- 파라미터 ⇒ camelCase
 - 상수 ⇒ BIG_SNAKE_CASE
 - 이벤트 핸들링 ⇒ handle+명사+동사
 
