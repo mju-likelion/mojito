@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import Button from '../../../components/Button';
+// import Button from '../../../components/Button';
 
 import { AboutLikelion, AboutMJU } from './AboutContent';
 
@@ -35,14 +35,14 @@ const Wrapper = styled.div`
   }
 `;
 
-const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 80px;
+// const ButtonWrapper = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   margin-top: 80px;
 
-  @media ${({ theme }) => theme.devices.DESKTOP} {
-    margin-top: 200px;
-  }
-`;
+//   @media ${({ theme }) => theme.devices.DESKTOP} {
+//     margin-top: 200px;
+//   }
+// `;
 
 export default About;
