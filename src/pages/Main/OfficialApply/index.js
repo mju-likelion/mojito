@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-// import Button from '../../../components/Button';
+import Button from '../../../components/Button';
 import ResponsiveBody from '../../../components/ResponsiveBody';
 
 import OFFICIAL_APPLY_CONTENT from './OfficialApplyContent';
@@ -12,9 +12,9 @@ const OfficialApply = () => {
         <ResponsiveBody mobileContent={mobileContent} tabletContent={tabletContent} desktopContent={desktopContent} />
         <ProposeText>저희와 함께 가실까요?</ProposeText>
       </ContentText>
-      {/* <ButtonBox>
+      <ButtonBox>
         <Button text={'지원하기'} handleClick={() => window.open(process.env.REACT_APP_APPLY_URL, '_blank')} />
-      </ButtonBox> */}
+      </ButtonBox>
     </Container>
   );
 };
@@ -60,13 +60,13 @@ const ProposeText = styled.p`
     line-height: 50px;
   }
 `;
-// const ButtonBox = styled.div`
-//   margin: 80px auto 125px;
-//   @media ${({ theme }) => theme.devices.TABLET} {
-//     margin: 80px auto 25px;
-//   }
-//   @media ${({ theme }) => theme.devices.DESKTOP} {
-//     margin: 100px auto 40px;
-//   }
-// `;
+const ButtonBox = styled.div`
+  margin: 80px auto 125px;
+  @media ${({ theme }) => theme.devices.TABLET} {
+    margin: 80px auto 25px;
+  }
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    margin: 100px auto 40px;
+  }
+`;
 export default OfficialApply;

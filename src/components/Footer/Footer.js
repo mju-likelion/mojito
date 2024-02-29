@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import styled from 'styled-components';
 
-// import { ReactComponent as ArrowIcon } from '../../assets/images/icon_footer_arrow.svg';
+import { ReactComponent as ArrowIcon } from '../../assets/images/icon_footer_arrow.svg';
 
 import Toast from './../Toast';
 import FooterIcons from './FooterIcons';
@@ -22,8 +22,8 @@ const Footer = () => {
         />
       )}
       <RouteApplyBox href={process.env.REACT_APP_APPLY_URL} target="_blank" rel="noopener noreferrer">
-        {/* <RouteApplyBtn>멋쟁이사자처럼 명지대(자연) 12기 APPLY</RouteApplyBtn> */}
-        {/* <ArrowIcon /> */}
+        <RouteApplyBtn>멋쟁이사자처럼 명지대(자연) 12기 APPLY</RouteApplyBtn>
+        <ArrowIcon />
       </RouteApplyBox>
       <CopyrightBox>© 2024. LIKELION MJU All pictures cannot be copied without permission.</CopyrightBox>
     </FooterBox>
@@ -65,19 +65,19 @@ const RouteApplyBox = styled.a`
   }
 `;
 
-// const RouteApplyBtn = styled.button`
-//   all: unset;
-//   color: ${({ theme }) => theme.colors.GRAY2};
-//   font-size: 12px;
-//   line-height: 14px;
-//   height: 20px;
-//   text-align: center;
-//   @media ${({ theme }) => theme.devices.DESKTOP} {
-//     font-size: 14px;
-//     line-height: 16px;
-//     height: 30px;
-//   }
-// `;
+const RouteApplyBtn = styled.button`
+  all: unset;
+  color: ${({ theme }) => theme.colors.GRAY2};
+  font-size: 12px;
+  line-height: 14px;
+  height: 20px;
+  text-align: center;
+  @media ${({ theme }) => theme.devices.DESKTOP} {
+    font-size: 14px;
+    line-height: 16px;
+    height: 30px;
+  }
+`;
 
 const CopyrightBox = styled.div`
   color: ${({ theme }) => theme.colors.GRAY3};
